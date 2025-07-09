@@ -1,0 +1,135 @@
+<Component Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC6" src="Components/VaconMarineAppFCC6.xml" Description="Interfaces a Vacon FC with Marine Application, using OPT-C6 CANopen option board.">
+  <LoopbackMode>0</LoopbackMode>
+  <NodeName>FC1</NodeName>
+  <OptionBoard>OPT-C6</OptionBoard>
+  <SchedulingOrder>TopDown</SchedulingOrder>
+  <SchedulingGroup>Default</SchedulingGroup>
+  <InitialState>Init</InitialState>
+  <fs>100</fs>
+  <Status>0</Status>
+
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+    <Signal Description="Stop drive by coasting (no torque)" Input="1" Model="CDPSignal&lt;bool&gt;" Name="StopByCoast" Type="bool" Value="1"></Signal>
+    <Signal Description="Stop drive by ramp down" Input="1" Model="CDPSignal&lt;bool&gt;" Name="StopByRamp" Type="bool" Value="1"></Signal>
+    <Signal Description="Status flags from AFE." FlagDefinition="SFlagAFE" Input="1" Model="StatusFlags" Name="StatusAFE" Routing=".AFE.StatusFlags" Type="unsigned int"></Signal>
+    <Signal Description="Selects which StartFunction the drive shall use . 0=Ramp, 1=FlyingStart" Input="1" Model="CDPSignal&lt;int&gt;" Name="StartFunction" Type="int"></Signal>
+    <Signal Description="Selects which StopFunction the drive shall use . 0=Coasting, 1=Ramp" Input="1" Model="CDPSignal&lt;int&gt;" Name="StopFunction" Type="int" Value="1"></Signal>
+    <Signal Description="Output indicating running mode." Input="0" Model="CDPSignal&lt;bool&gt;" Name="DriveRunning" Type="bool" Unit="0/1"></Signal>
+    <Signal Description="Delayed/filtered fault signal (using param FaultDelayOff)." Input="0" Model="CDPSignal&lt;bool&gt;" Name="FaultDelayed" Type="bool" Unit="0/1"></Signal>
+    <Signal Description="Fault bit from drive status word" Input="0" Model="CDPSignal&lt;bool&gt;" Name="FaultBit" Type="bool"></Signal>
+    <Signal Description="Warning bit from drive status word" Input="0" Model="CDPSignal&lt;bool&gt;" Name="WarningBit" Type="bool"></Signal>
+    <Signal Description="If parameter CheckAlternativeParameters is set, correct set of alternative parameters will be transferred depending on value of this signal." Input="1" Model="CDPSignal&lt;bool&gt;" Name="EnableAlternativeParameters" Type="bool" Unit="0/1"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Level="Error" Name="Component Suspended" Text="Component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+    <Alarm Description="Freq. converter 1 fault" Level="Error" Name="Fault" SourceValueRouting=".FaultDelayed" Text="Freq. converter 1 fault"></Alarm>
+    <Alarm Description="Freq. converter warning" Name="Warning" SourceValueRouting=".WarningBit" Text="Freq. converter warning"></Alarm>
+    <Alarm Description="Drive disabled by operator" Level="Notify" Name="DriveDisabled" Text="Drive disabled by operator"></Alarm>
+    <Alarm Description="High temperature on motor X winding 1" ErrorHighLevelText="Critical temperature on motor X winding 1" ErrorLowLevelText="Freezing temp on motor X winding 1" LevelHighError="155" LevelHighWarning="140" LevelLowWarning="3" Name="MotorTemp1" Text="High temperature on motor X winding 1" WarningHighLevelText="High temperature on motor X winding 1" WarningLowLevelText="Low temp on motor X winding 1"></Alarm>
+    <Alarm Description="High temperature on motor X winding 2" ErrorHighLevelText="Critical temperature on motor X winding 2" ErrorLowLevelText="Freezing temp on motor X winding 2" LevelHighError="155" LevelHighWarning="140" LevelLowWarning="3" Name="MotorTemp2" Text="High temperature on motor X winding 2" WarningHighLevelText="High temperature on motor X winding 2" WarningLowLevelText="Low temp on motor X winding 2"></Alarm>
+    <Alarm Description="High temperature on motor X winding 3" ErrorHighLevelText="Critical temperature on motor X winding 3" ErrorLowLevelText="Freezing temp on motor X winding 3" LevelHighError="155" LevelHighWarning="140" LevelLowWarning="3" Name="MotorTemp3" Text="High temperature on motor X winding 3" WarningHighLevelText="High temperature on motor X winding 3" WarningLowLevelText="Low temp on motor X winding 3"></Alarm>
+    <Alarm Description="Low voltage on DC-bus" Name="DCVoltageLow" Text="Low voltage on DC-bus"></Alarm>
+    <Alarm Description="Drive is given  run command, but is not running" Name="NotRunning" Text="Not running" Timeout="1"></Alarm>
+  </Alarms>
+
+  <VaconParameters>
+    <VaconParameter DataType="short" Description="Fieldbus data out 1 selection (TPDO21 byte 5-6). ID 65   = FBStatusWord.     (default ID  1 Output Frequency)." ID="852" Index="P2.13.3" Model="VaconLib.VaconParameter" Name="FB Data Out 1 Sel" Scaling="1" Value="65"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data out 2 selection (TPDO21 byte 7-8). ID 1170 = Shaft Rounds      (default ID  2 Motor Speed)." ID="853" Index="P2.13.4" Model="VaconLib.VaconParameter" Name="FB Data Out 2 Sel" Scaling="1" Value="1170"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data out 3 selection (TPDO22 byte 1-2). ID 7    = DC Link voltage   (default ID 45 Motor Current to FB)." ID="854" Index="P2.13.5" Model="VaconLib.VaconParameter" Name="FB Data Out 3 Sel" Scaling="1" Value="7"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data out 4 selection (TPDO22 byte 3-4). ID 4    = Motor Torque      (default ID  4 Motor Torque)." ID="855" Index="P2.13.6" Model="VaconLib.VaconParameter" Name="FB Data Out 4 Sel" Scaling="1" Value="4"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data out 5 selection (TPDO22 byte 5-6). ID 56   = Din Status Word   (default ID  5 Motor Power)." ID="856" Index="P2.13.7" Model="VaconLib.VaconParameter" Name="FB Data Out 5 Sel" Scaling="1" Value="56"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data out 6 selection (TPDO22 byte 7-8). ID 37   = Last Active Fault (default ID  6 Motor Voltage)." ID="857" Index="P2.13.8" Model="VaconLib.VaconParameter" Name="FB Data Out 6 Sel" Scaling="1" Value="37"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data in 1 selection (RPDO21 byte 5-6). ID 1140 = FB Torque Reference       (default ID 1140 FB Torque Reference)." ID="876" Index="P2.13.19" Model="VaconLib.VaconParameter" Name="FB Data In 1 Sel" Scaling="1" Value="1140"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data in 2 selection (RPDO21 byte 7-8). ID 1287 = Torque Limit Motoring     (default ID   46 FB Limit Scaling)." ID="877" Index="P2.13.20" Model="VaconLib.VaconParameter" Name="FB Data In 2 Sel" Scaling="1" Value="1287"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data in 3 selection (RPDO22 byte 1-2). ID 1288 = Torque Limit Generatoring (default ID   47 FB Adjust Reference)." ID="878" Index="P2.13.21" Model="VaconLib.VaconParameter" Name="FB Data In 3 Sel" Scaling="1" Value="1288"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data in 4 selection (RPDO22 byte 3-4). ID 1289 = Power Limit Motoring      (default ID   48 FB Analogue Output)." ID="879" Index="P2.13.22" Model="VaconLib.VaconParameter" Name="FB Data In 4 Sel" Scaling="1" Value="1289"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data in 5 selection (RPDO22 byte 5-6). ID 1290 = Power Limit Generatoring  (default ID    0 not used)." ID="880" Index="P2.13.23" Model="VaconLib.VaconParameter" Name="FB Data In 5 Sel" Scaling="1" Value="1290"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data in 6 selection (RPDO22 byte 7-8). ID 0    = Not used                  (default ID    0 not used)." ID="881" Index="P2.13.24" Model="VaconLib.VaconParameter" Name="FB Data In 6 Sel" Scaling="1"></VaconParameter>
+    <VaconParameter DataType="short" Description="General Status Word selection. 64=MC Status." ID="897" Index="P2.13.35" Model="VaconLib.VaconParameter" Name="GSW ID" Scaling="1" Value="64"></VaconParameter>
+    <VaconParameter DataType="short" Description="Actual Speed shown on fieldbus. 0=Calculated, 1=Actual." ID="1741" Index="P2.13.36" Model="VaconLib.VaconParameter" Name="ActualSpeedShown" Scaling="1" Value="1"></VaconParameter>
+    <VaconParameter DataType="short" Description="Profibus Mode: 1=Standard, 2=ProfiDrive." ID="896" Index="P2.13.38" Model="VaconLib.VaconParameter" Name="Profibus Mode" Scaling="1" Value="2"></VaconParameter>
+    <VaconParameter DataType="short" Description="The drooping function enables speed drop as a function of load. This parameter sets the value corresponding to the nominal torque of the motor." ID="620" Index="P2.9.1" Model="VaconLib.VaconParameter" Name="Load Drooping" Scaling="0.010000000000000000208"></VaconParameter>
+    <VaconParameter DataType="short" Description="Control location: 0=I/O Terminal, 2=Keypad, 3=Fieldbus." ID="125" Index="P3.1" Model="VaconLib.VaconParameter" Name="Control Place" Scaling="1" Value="3"></VaconParameter>
+    <VaconParameter DataType="short" Description="Defines how the drive should start 0=Ramp, 1=Flying start." ID="505" Index="P2.3.1" Model="VaconLib.VaconParameter" Name="Start Function" Scaling="1"></VaconParameter>
+    <VaconParameter DataType="short" Description="Defines how the drive should stop. 0=Coast, 1=Ramp." ID="506" Index="P2.3.2" Model="VaconLib.VaconParameter" Name="Stop Function" Scaling="1"></VaconParameter>
+    <VaconParameter DataType="short" Description="0=OL FreqCtrl, 1=OL SpeedCtrl, 2=OLSpeed/Torq, 3=CL SpeedCtrl, 4=CLSpeed/Torq." ID="600" Index="P2.8.1" Model="VaconLib.VaconParameter" Name="Motor Ctrl Mode" Scaling="1"></VaconParameter>
+    <VaconParameter DataType="short" Description="Select the Master Follower mode. When the drive is a follower, the Run Request command is monitored from Master but all references are selectable by parameters." ID="1324" Index="P2.11.1" Model="VaconLib.VaconParameter" Name="Master Follower Mode" Scaling="1"></VaconParameter>
+    <VaconParameter DataType="short" Description="Time from zero to max speed." ID="103" Index="P2.3.3" Model="VaconLib.VaconParameter" Name="Accel Time 1" Scaling="0.10000000000000000555"></VaconParameter>
+    <VaconParameter DataType="short" Description="Time from max to zero speed." ID="104" Index="P2.3.4" Model="VaconLib.VaconParameter" Name="Decel Time 1" Scaling="0.10000000000000000555"></VaconParameter>
+    <VaconParameter DataType="short" Description="Closed loop ramp generator follows encoder speed." ID="1902" Index="P2.3.12.2" Model="VaconLib.VaconParameter" Name="CLRampFollowEncoderFreq" Scaling="1"></VaconParameter>
+  </VaconParameters>
+
+  <Ports>
+    <Port Input="1" Model="VaconLib.VaconMarineAppFCPort" Name="Drive" Routing="AntiBacklashApp.AntiBacklashController.FC1" ModeSelect="0">
+
+      <Connections>
+        <Connection Input="1" LocalName=".Enable" Model="CDPPortConnection" Name="MapEnable"></Connection>
+        <Connection Input="1" LocalName=".ModeSelect" Model="CDPPortConnection" Name="MapModeSelect"></Connection>
+        <Connection Input="1" LocalName=".SpeedRef" Model="CDPPortConnection" Name="MapSpeedRef"></Connection>
+        <Connection Input="1" LocalName=".TorqueRef" Model="CDPPortConnection" Name="MapTorqueRef"></Connection>
+        <Connection Input="1" LocalName=".TorqueLimitMotoring" Model="CDPPortConnection" Name="MapTorqueLimitMotoring"></Connection>
+        <Connection Input="1" LocalName=".TorqueLimitGeneratoring" Model="CDPPortConnection" Name="MapTorqueLimitGeneratoring"></Connection>
+        <Connection Input="1" LocalName=".PowerLimitMotoring" Model="CDPPortConnection" Name="MapPowerLimitMotoring"></Connection>
+        <Connection Input="1" LocalName=".PowerLimitGeneratoring" Model="CDPPortConnection" Name="MapPowerLimitGeneratoring"></Connection>
+        <Connection Input="1" LocalName=".LoadDrooping" Model="CDPPortConnection" Name="MapLoadDrooping"></Connection>
+        <Connection Input="1" LocalName=".MasterFollowerMode" Model="CDPPortConnection" Name="MapMasterFollowerMode"></Connection>
+        <Connection Input="0" LocalName=".StatusFlags" Model="CDPPortConnection" Name="MapStatusFlags"></Connection>
+        <Connection Input="0" LocalName=".SpeedActual" Model="CDPPortConnection" Name="MapSpeedActual"></Connection>
+        <Connection Input="0" LocalName=".TorqueActual" Model="CDPPortConnection" Name="MapTorqueActual"></Connection>
+      </Connections></Port>
+    <Port Input="1" Model="VaconLib.FCIOPort" Name="FCIOPort" Routing="AntiBacklashApp.CANOpenPCIIOServer.FC1">
+
+      <Connections>
+        <Connection Input="1" LocalName=".OnlineState" Model="CDPPortConnection" Name="MapOnlineState" RemoteName=".NodeState"></Connection>
+        <Connection Input="1" LocalName=".FBStatusWord" Model="CDPPortConnection" Name="MapFBStatusWord" RemoteName=".TPDO21.FBStatusWord"></Connection>
+        <Connection Input="1" LocalName=".LastActiveFault" Model="CDPPortConnection" Name="MapLastActiveFault" RemoteName=".TPDO22.LastActiveFault"></Connection>
+        <Connection Input="1" LocalName=".FBActualSpeed" Model="CDPPortConnection" Name="MapFBActualSpeed" RemoteName=".TPDO21.ActualSpeed"></Connection>
+        <Connection Input="1" LocalName=".FBMotorTorque" Model="CDPPortConnection" Name="MapFBMotorTorque" RemoteName=".TPDO22.MotorTorque"></Connection>
+        <Connection Input="1" LocalName=".DINStatusWord" Model="CDPPortConnection" Name="MapDINStatusWord" RemoteName=".TPDO22.DINStatusWord"></Connection>
+        <Connection Input="1" LocalName=".FBDCLinkVoltage" Model="CDPPortConnection" Name="MapFBDCLinkVoltage" RemoteName=".TPDO22.DCLinkVoltage"></Connection>
+        <Connection Input="0" LocalName=".FBControlWord" Model="CDPPortConnection" Name="MapFBControlWord" RemoteName=".RPDO21.FBControlWord"></Connection>
+        <Connection Input="0" LocalName=".FBSpeedRef" Model="CDPPortConnection" Name="MapFBSpeedRef" RemoteName=".RPDO21.SpeedRef"></Connection>
+        <Connection Input="0" LocalName=".FBTorqueRef" Model="CDPPortConnection" Name="MapFBTorqueRef" RemoteName=".RPDO21.TorqueRef"></Connection>
+        <Connection Input="0" LocalName=".FBTorqueLimitMotoring" Model="CDPPortConnection" Name="MapFBTorqueLimitMotoring" RemoteName=".RPDO21.TorqueLimMot"></Connection>
+        <Connection Input="0" LocalName=".FBTorqueLimitGeneratoring" Model="CDPPortConnection" Name="MapFBTorqueLimitGeneratoring" RemoteName=".RPDO22.TorqueLimGen"></Connection>
+        <Connection Input="0" LocalName=".FBPowerLimitMotoring" Model="CDPPortConnection" Name="MapFBPowerLimitMotoring" RemoteName=".RPDO22.PowerLimMot"></Connection>
+        <Connection Input="0" LocalName=".FBPowerLimitGeneratoring" Model="CDPPortConnection" Name="MapFBPowerLimitGeneratoring" RemoteName=".RPDO22.PowerLimGen"></Connection>
+      </Connections></Port>
+  </Ports>
+
+  <Parameters>
+    <Parameter Description="Invert direction of speed and torque" Max="1" Min="0" Name="InvertDirection" Unit="0/1" Value="0" Routing=""></Parameter>
+    <Parameter Description="Motor nominal speed (from motor rating plate)" Max="3000" Min="360" Name="MotorNomSpeed" Unit="rpm" Value="1400"></Parameter>
+    <Parameter Description="Motor nominal frequency (from motor rating plate)" Max="60" Min="50" Name="MotorNomFreq" Unit="Hz" Value="50"></Parameter>
+    <Parameter Description="Motor nominal current (from motor rating plate)" Name="MotorNomCurrent" Unit="A" Value="2.6200000000000001066"></Parameter>
+    <Parameter Description="Nominal motor power (from motor rating plate)" Name="MotorNomPower" Unit="kW" Value="0.55000000000000004441"></Parameter>
+    <Parameter Description="Motor nominal cosinus phi (from motor rating plate)" Max="1" Min="0.5" Name="MotorNomCosPhi" Value="0.73999999999999999112"></Parameter>
+    <Parameter Description="Motor nominal voltage (from motor rating plate)" Max="690" Min="230" Name="MotorNomVoltage" Unit="V" Value="230"></Parameter>
+    <Parameter Description="Nominal torque of motor (from motor data sheet)" Max="99999" Min="1" Name="MotorNomTorque" Unit="Nm" Value="3.75"></Parameter>
+    <Parameter Description="Set EnableDebugOverride parameter to 471 to write cw_bXX bits to the control word, and also set FBSpeedRef=SpeedRef ." Max="500" Min="0" Name="EnableDebugOverride"></Parameter>
+    <Parameter Description="Motor efficiency (from data sheet)" Max="1" Min="0.5" Name="MotorEfficiency" Value="0.95999999999999996447"></Parameter>
+    <Parameter Description="Used to scale SpeedRef to %, so this signal must have same unit as SpeedRef" Max="1000" Min="1" Name="MotorMaxSpeed" Unit="rad/s" Value="146"></Parameter>
+    <Parameter Description="Disable the drive. Prevents it from being used in case of motor failure etc." Max="1" Min="0" Name="DisableDrive"></Parameter>
+    <Parameter Description="Filter order of ActualTorque filter" Max="5" Min="1" Name="ActualTorqueFilterOrder" Value="2"></Parameter>
+    <Parameter Description="Corner frequency of ActualTorque low-pass filter" Max="25" Min="0.10000000000000000555" Name="ActualTorqueFilterCornerFreq" Unit="Hz" Value="5"></Parameter>
+    <Parameter Description="Set to 1 to ignore status of AFE." Max="1" Min="0" Name="IgnoreAFEStatus" Unit="0/1" Value="1"></Parameter>
+    <Parameter Description="Time FaultDelayed will be delayed before switching OFF." Max="2" Min="0" Name="FaultDelayOff" Unit="s" Value="0.5"></Parameter>
+    <Parameter Description="Divisor to slow down watchdog toggling. 0=disable wathcdog." Max="10" Min="0" Name="WatchdogDivisor" Unit="times"></Parameter>
+    <Parameter Description="If 1, a ResetFault message is required to clear the fault in the drive" Max="1" Min="0" Name="ManualFaultReset" Unit="0/1"></Parameter>
+    <Parameter Description="If enabled, will check input signal EnableAlternativeParameters and transfer parameters accordingly" Max="1" Min="0" Name="CheckAlternativeParameters" Unit="0/1"></Parameter>
+    <Parameter Description="Original value for AccelTime1 and DecelTime1. Transferred if CheckAlternativeParameters=1 and EnableAlternativeParameters=0." Name="RampOrig" Unit="s" Value="2"></Parameter>
+    <Parameter Description="Alternative value for AccelTime1 and DecelTime1. Transferred if CheckAlternativeParameters=1 and EnableAlternativeParameters=1." Name="RampAlt" Unit="s" Value="5"></Parameter>
+    <Parameter Description="Original value for CLRampFollowEncoderFreq. Transferred if CheckAlternativeParameters=1 and EnableAlternativeParameters=0." Name="CLRampFollowEncFreqOrig"></Parameter>
+    <Parameter Description="Original value for CLRampFollowEncoderFreq. Transferred if CheckAlternativeParameters=1 and EnableAlternativeParameters=1." Name="CLRampFollowEncFreqAlt" Value="1"></Parameter>
+  </Parameters>
+
+  <Connectors>
+    <Connector Description="Connector to the CANopenIOServer" Name="CANopenIOServer" Object="AntiBacklashApp.CANOpenPCIIOServer"></Connector>
+  </Connectors>
+
+</Component>
