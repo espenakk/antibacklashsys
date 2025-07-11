@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="CDPBaseMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1040</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Ubuntu Sans</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Main Window</string>
+  </property>
+  <property name="msgBoxBgSvg">
+   <string>:/themes/flat_gray_light/backgrounds/bgMsgBox.svg</string>
+  </property>
+  <property name="msgBoxBtnSvg">
+   <string>:/themes/flat_gray_light/buttons/buttonPlain.svg</string>
+  </property>
+  <property name="themeNight">
+   <string>flat_gray</string>
+  </property>
+  <property name="themeDay">
+   <string>flat_gray_light</string>
+  </property>
+  <property name="numPadName" stdset="0">
+   <string>CDPBaseNumPad</string>
+  </property>
+  <property name="keyPadName" stdset="0">
+   <string>CDPBaseKeyPad</string>
+  </property>
+  <property name="loginRole">
+   <string>Operator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="CDPBaseLabel" name="ElapsedTime">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>230</y>
+      <width>111</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Elapsed time</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.elapsedTime.Value</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLamp" name="AblLamp">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>10</y>
+      <width>121</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="svgFile">
+     <string>:/themes/flat_gray_light/pictures/lampRing.svg</string>
+    </property>
+    <property name="cdpStyleRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.antiBacklashEnabled.Value</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string/>
+    </property>
+    <property name="svgType" stdset="0">
+     <enum>CDPBaseLamp::Ring</enum>
+    </property>
+   </widget>
+   <widget class="CDPBaseLamp" name="RunningLamp">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>10</y>
+      <width>121</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="svgFile">
+     <string>:/themes/flat_gray_light/pictures/lampRing.svg</string>
+    </property>
+    <property name="cdpStyleRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.runningAntiBacklashTestScript.Value</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string/>
+    </property>
+    <property name="svgType" stdset="0">
+     <enum>CDPBaseLamp::Ring</enum>
+    </property>
+   </widget>
+   <widget class="CDPBaseMeter2N" name="VelocityC">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>0</y>
+      <width>261</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="meterType">
+     <enum>CDPBaseMeter::Custom</enum>
+    </property>
+    <property name="textPrefix">
+     <string>Velocity</string>
+    </property>
+    <property name="textSuffix">
+     <string>Motor C</string>
+    </property>
+    <property name="numPrecision" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.FC3.SpeedRef</string>
+    </property>
+    <property name="minValue2">
+     <double>-100.000000000000000</double>
+    </property>
+    <property name="numPrecision2" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="cdpRouting2" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.FC3.SpeedActual</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseMeter2N" name="VelocityB">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>261</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="meterType">
+     <enum>CDPBaseMeter::Custom</enum>
+    </property>
+    <property name="maxValue">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="textPrefix">
+     <string>Velocity</string>
+    </property>
+    <property name="textSuffix">
+     <string>Motor B</string>
+    </property>
+    <property name="numPrecision" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="valueMaxNormal">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="valueMaxWarning">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="valueMaxWarningHigh">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="valueMaxError">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.FC2.SpeedRef</string>
+    </property>
+    <property name="minValue2">
+     <double>-100.000000000000000</double>
+    </property>
+    <property name="maxValue2">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="numPrecision2" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="valueMaxNormal2">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="valueMaxWarning2">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="valueMaxWarningHigh2">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="valueMaxError2">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="cdpRouting2" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.FC2.SpeedActual</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="Export">
+    <property name="geometry">
+     <rect>
+      <x>1600</x>
+      <y>60</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Export</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="Running">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>60</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Running</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseMeter2N" name="VelocityA">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>261</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="meterType">
+     <enum>CDPBaseMeter::Custom</enum>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="textPrefix">
+     <string>Velocity</string>
+    </property>
+    <property name="textSuffix">
+     <string>Motor A</string>
+    </property>
+    <property name="numPrecision" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.FC1.SpeedRef</string>
+    </property>
+    <property name="minValue2">
+     <double>-100.000000000000000</double>
+    </property>
+    <property name="numPrecision2" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="cdpRouting2" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.FC1.SpeedActual</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="Antibacklash">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>60</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Antibacklash</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseBar" name="ElapsedTimeBar">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>10</y>
+      <width>71</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="valueMaxNormal">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="valueMaxWarning">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="valueMaxWarningHigh">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="valueMaxError">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/bars/barBase.svg</string>
+    </property>
+    <property name="maxValue">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.elapsedTime</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseButton" name="StartButton">
+    <property name="geometry">
+     <rect>
+      <x>1430</x>
+      <y>10</y>
+      <width>121</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="widgetPicture">
+     <number>0</number>
+    </property>
+    <property name="stylingType" stdset="0">
+     <enum>CDPBaseButton::Radio</enum>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/buttons/buttonRadio.svg</string>
+    </property>
+    <property name="svgParsing" stdset="0">
+     <enum>CDPBaseButton::ParseImages</enum>
+    </property>
+    <property name="padType">
+     <enum>CDPBaseButton::None</enum>
+    </property>
+    <property name="padInfoText1" stdset="0">
+     <string/>
+    </property>
+    <property name="padInfoText2" stdset="0">
+     <string/>
+    </property>
+    <property name="cdpPressedRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.startAntibacklashTestButton.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpPressedRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseToggleButton" name="ExportButton">
+    <property name="geometry">
+     <rect>
+      <x>1570</x>
+      <y>10</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpTextMsgRouting</string>
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/buttons/toggleButtonDefault.svg</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.exportData.Value</string>
+    </property>
+    <property name="cdpEnabledRouting">
+     <string/>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="Start">
+    <property name="geometry">
+     <rect>
+      <x>1430</x>
+      <y>60</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseCheckBox" name="dirC">
+    <property name="geometry">
+     <rect>
+      <x>1610</x>
+      <y>230</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist>
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+    <property name="text">
+     <string>dirC</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.dirC.Value</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseSlider" name="sliderC">
+    <property name="geometry">
+     <rect>
+      <x>1850</x>
+      <y>10</y>
+      <width>56</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="toolTipDuration">
+     <number>5</number>
+    </property>
+    <property name="numPrecision" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinNormal">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinWarning">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinWarningHigh">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinError">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/sliders/sliderRoundKnob.svg</string>
+    </property>
+    <property name="knobText" stdset="0">
+     <bool>true</bool>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.userVelocityCmdC.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseCheckBox" name="dirAB">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>230</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist>
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+    <property name="text">
+     <string>dirAB</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.dir.Value</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="SpeedCMD">
+    <property name="geometry">
+     <rect>
+      <x>1710</x>
+      <y>10</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Speed commands</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseSlider" name="sliderB">
+    <property name="geometry">
+     <rect>
+      <x>1780</x>
+      <y>10</y>
+      <width>56</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="toolTipDuration">
+     <number>5</number>
+    </property>
+    <property name="numPrecision" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinNormal">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinWarning">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinWarningHigh">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinError">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/sliders/sliderRoundKnob.svg</string>
+    </property>
+    <property name="knobText" stdset="0">
+     <bool>true</bool>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.userVelocityCmdB.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseCheckBox" name="Enabled_AB">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>200</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist>
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+    <property name="text">
+     <string>Enabled</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.enabled.Value</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseSlider" name="sliderA">
+    <property name="geometry">
+     <rect>
+      <x>1710</x>
+      <y>10</y>
+      <width>56</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="toolTipDuration">
+     <number>5</number>
+    </property>
+    <property name="numPrecision" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinNormal">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinWarning">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinWarningHigh">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="valueMinError">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/sliders/sliderRoundKnob.svg</string>
+    </property>
+    <property name="knobText" stdset="0">
+     <bool>true</bool>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.userVelocityCmdA.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseCheckBox" name="Enabled_C">
+    <property name="geometry">
+     <rect>
+      <x>1610</x>
+      <y>200</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist>
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+    <property name="text">
+     <string>Enabled</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.loadEnabled.Value</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseMeter" name="VelocityENC">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>0</y>
+      <width>261</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="meterType">
+     <enum>CDPBaseMeter::Custom</enum>
+    </property>
+    <property name="minValue">
+     <double>-100.000000000000000</double>
+    </property>
+    <property name="textPrefix">
+     <string>Velocity</string>
+    </property>
+    <property name="textSuffix">
+     <string>Encoder</string>
+    </property>
+    <property name="numPrecision" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.scaledEncSpeed.Value</string>
+    </property>
+   </widget>
+   <widget class="CDP::GraphWidgets::CdpSignalGraphWidget" name="signalGraph_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>640</y>
+      <width>1921</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="lineWidth">
+     <number>5</number>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="cdpSignals">
+     <stringlist>
+      <string>AntiBacklashApp.AntiBacklashController.scaledEncSpeed</string>
+      <string>AntiBacklashApp.AntiBacklashController.FC1.SpeedActual</string>
+      <string>AntiBacklashApp.AntiBacklashController.FC2.SpeedActual</string>
+      <string>AntiBacklashApp.AntiBacklashController.FC3.SpeedActual</string>
+     </stringlist>
+    </property>
+    <property name="plottingMode">
+     <enum>CDP::GraphWidgets::CdpSignalGraphWidget::Scrolling</enum>
+    </property>
+    <property name="cssFile">
+     <string notr="true">:/themes/flat_gray_light/graphs/graph.css</string>
+    </property>
+    <property name="lineColors">
+     <string>#0000ff;#00ff00;#ff0000;#00ffff;#ff00ff;#ffff00;#000080;#008000;#800000;#008080;#800080;#808000;#000000;#606060;#808080;#a0a0a0;#c0c0c0</string>
+    </property>
+    <property name="xAxisFont">
+     <font>
+      <family>Bitstream Charter</family>
+     </font>
+    </property>
+    <property name="xAxisMajorTickCount">
+     <UInt>4</UInt>
+    </property>
+    <property name="xAxisMinorTickCount">
+     <UInt>5</UInt>
+    </property>
+    <property name="yAxisMinValue">
+     <double>-100.000000000000000</double>
+    </property>
+    <property name="yAxisMaxValue">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="yAxisFont">
+     <font>
+      <family>Bitstream Charter</family>
+     </font>
+    </property>
+    <property name="yAxisMajorTickCount">
+     <UInt>10</UInt>
+    </property>
+    <property name="yAxisMinorTickCount">
+     <UInt>3</UInt>
+    </property>
+    <property name="legendFont">
+     <font>
+      <family>Bitstream Charter</family>
+     </font>
+    </property>
+    <property name="exportPath">
+     <string>../data/speed</string>
+    </property>
+    <property name="exportFormat">
+     <enum>CDP::GraphWidgets::GraphExport::CSV</enum>
+    </property>
+   </widget>
+   <widget class="CDP::GraphWidgets::CdpSignalGraphWidget" name="signalGraph_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>1921</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="lineWidth">
+     <number>5</number>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="cdpSignals">
+     <stringlist>
+      <string>AntiBacklashApp.AntiBacklashController.FC1.TorqueActual</string>
+      <string>AntiBacklashApp.AntiBacklashController.FC2.TorqueActual</string>
+      <string>AntiBacklashApp.AntiBacklashController.FC3.TorqueActual</string>
+     </stringlist>
+    </property>
+    <property name="plottingMode">
+     <enum>CDP::GraphWidgets::CdpSignalGraphWidget::Scrolling</enum>
+    </property>
+    <property name="cssFile">
+     <string notr="true">:/themes/flat_gray_light/graphs/graph.css</string>
+    </property>
+    <property name="lineColors">
+     <string>#0000ff;#00ff00;#ff0000;#00ffff;#ff00ff;#ffff00;#000080;#008000;#800000;#008080;#800080;#808000;#000000;#606060;#808080;#a0a0a0;#c0c0c0</string>
+    </property>
+    <property name="xAxisFont">
+     <font>
+      <family>Bitstream Charter</family>
+     </font>
+    </property>
+    <property name="xAxisMajorTickCount">
+     <UInt>4</UInt>
+    </property>
+    <property name="xAxisMinorTickCount">
+     <UInt>5</UInt>
+    </property>
+    <property name="yAxisMinValue">
+     <double>-10.000000000000000</double>
+    </property>
+    <property name="yAxisMaxValue">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="yAxisFont">
+     <font>
+      <family>Bitstream Charter</family>
+     </font>
+    </property>
+    <property name="yAxisMajorTickCount">
+     <UInt>10</UInt>
+    </property>
+    <property name="yAxisMinorTickCount">
+     <UInt>3</UInt>
+    </property>
+    <property name="legendFont">
+     <font>
+      <family>Bitstream Charter</family>
+     </font>
+    </property>
+    <property name="exportPath">
+     <string>../data/torque</string>
+    </property>
+    <property name="exportFormat">
+     <enum>CDP::GraphWidgets::GraphExport::CSV</enum>
+    </property>
+   </widget>
+   <zorder>AblLamp</zorder>
+   <zorder>RunningLamp</zorder>
+   <zorder>VelocityC</zorder>
+   <zorder>VelocityB</zorder>
+   <zorder>Export</zorder>
+   <zorder>Running</zorder>
+   <zorder>VelocityA</zorder>
+   <zorder>Antibacklash</zorder>
+   <zorder>ElapsedTimeBar</zorder>
+   <zorder>StartButton</zorder>
+   <zorder>ExportButton</zorder>
+   <zorder>Start</zorder>
+   <zorder>dirC</zorder>
+   <zorder>sliderC</zorder>
+   <zorder>dirAB</zorder>
+   <zorder>SpeedCMD</zorder>
+   <zorder>sliderB</zorder>
+   <zorder>Enabled_AB</zorder>
+   <zorder>sliderA</zorder>
+   <zorder>Enabled_C</zorder>
+   <zorder>VelocityENC</zorder>
+   <zorder>ElapsedTime</zorder>
+   <zorder>signalGraph_3</zorder>
+   <zorder>signalGraph_2</zorder>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDPBaseSlider</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseSlider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseButton</class>
+   <extends>QPushButton</extends>
+   <header>CDPBaseWidgets/CDPBaseButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseToggleButton</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseToggleButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseCheckBox</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseCheckBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseLabel</class>
+   <extends>QLabel</extends>
+   <header>CDPBaseWidgets/CDPBaseLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseBar</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseBar.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMeter</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseMeter.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMeter2N</class>
+   <extends>CDPBaseMeter</extends>
+   <header>CDPBaseWidgets/CDPBaseMeter2N.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBasePicture</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBasePicture.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBasePictureSequence</class>
+   <extends>CDPBasePicture</extends>
+   <header>CDPBaseWidgets/CDPBasePictureSequence.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseLamp</class>
+   <extends>CDPBasePictureSequence</extends>
+   <header>CDPBaseWidgets/CDPBaseLamp.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMainWindow</class>
+   <extends>QMainWindow</extends>
+   <header>CDPBaseWidgets/CDPBaseMainWindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDP::GraphWidgets::CdpSignalGraphWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>cdp/graphwidgets/cdpsignalgraphwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ExportButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signalGraph_2</receiver>
+   <slot>exportData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1530</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>960</x>
+     <y>845</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ExportButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>signalGraph_3</receiver>
+   <slot>exportData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1530</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>960</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

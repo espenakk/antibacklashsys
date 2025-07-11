@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Application Name="AntiBacklashApp" Model="Application" Description=''>
-  <ApplicationHandle>1</ApplicationHandle>
+<Application Name="GUI" Model="CDP2Qt.Application" Description=''>
+  <ApplicationHandle>3</ApplicationHandle>
   <fs>10</fs>
   <ClockSync>None</ClockSync>
   <IsTimeServer>0</IsTimeServer>
@@ -12,12 +12,8 @@
   <NetworkInterface Name="ETH0" MAC="" IPAddress="192.168.150.150" SubnetMask="255.255.255.0"></NetworkInterface>
 
   <Subcomponents>
-    <Subcomponent Name="CDP"        Model="CDP"        src="Components\CDP.xml"></Subcomponent>
-    <Subcomponent Model="CANOpenPCIIOServer" Name="CANOpenPCIIOServer" src="Components/CANOpenPCIIOServer.xml"></Subcomponent>
-    <Subcomponent Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC6" src="Components/VaconMarineAppFCC6.xml"></Subcomponent>
-    <Subcomponent Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC61" src="Components/VaconMarineAppFCC61.xml"></Subcomponent>
-    <Subcomponent Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC62" src="Components/VaconMarineAppFCC62.xml"></Subcomponent>
-    <Subcomponent Model="AntiBacklashLib.AntiBacklashController" Name="AntiBacklashController" src="Components/AntiBacklashController.xml"></Subcomponent>
+    <Subcomponent Name="CDP"                Model="CDP"               src="Components\CDP.xml"></Subcomponent>
+    <Subcomponent Name="CDP2Qt"             Model="CDP2Qt"            src="Components\CDP2Qt.xml"></Subcomponent>
   </Subcomponents>
 
   <Signals>

@@ -1,10 +1,14 @@
-TYPE = application
-PROJECTNAME = AntiBacklashApp
+TYPE = guiapplication
+PROJECTNAME = GUI
 
-DEPS += antibacklashlib canopenio operationutilities vaconlib
+DEPS += \
 
 HEADERS += Libraries.h
 SOURCES += CDPMain.cpp
+
+OTHER_FILES += \
+    Application/mainwidget.ui \
+    Application/qt.conf
 
 DISTFILES += \
     $$files(*.xml, true) \
@@ -13,4 +17,4 @@ DISTFILES += \
 
 load(cdp)
 
-ID = 536582801508533107315920 # do not change
+ID = 461582601033525280915780 # do not change

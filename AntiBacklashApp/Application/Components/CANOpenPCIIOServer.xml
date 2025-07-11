@@ -53,54 +53,53 @@
       <BroadcastResetCommunicationAtStartup>0</BroadcastResetCommunicationAtStartup>
       <SynchFs>100</SynchFs>
       <BroadcastResetNodeAtStartup>1</BroadcastResetNodeAtStartup>
-
       <Node Address="1" GuardTime="0.10000000000000000555" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="FC1" Slave="0" UseSDODataSize="1" NodeType="NX OPT-C6 INU" Description="VaconFC controlling M101, using OPT-C6 CANopen option board.">
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO1" Nr="1" COBID="384">
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DPStatusWord" Type="unsigned short" Value="0" Description="Status word for DriveProfile. Also valid in Bypass modes."></CDPChannel></TPDO>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DPStatusWord" Type="unsigned short" Description="Status word for DriveProfile. Also valid in Bypass modes."></CDPChannel></TPDO>
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO21" Nr="21" COBID="896">
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="MCStatusWord" Type="unsigned short" Value="0" Description="MC Status Word (V1.26.17 - ID 64)"></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="ActualSpeed" Type="short" Value="0" Description="Actual Speed" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="MCStatusWord" Type="unsigned short" Description="MC Status Word (V1.26.17 - ID 64)"></CDPChannel>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="ActualSpeed" Type="short" Description="Actual Speed" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="100" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="1" Type="double"></ScalingPoint></Operator></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="FBStatusWord" Type="unsigned short" Value="0" Description="FBStatusWord (ID 65)"></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="ShaftRounds" Type="short" Value="0" Description="Shaft Rounds (ID 1170)" Unit="rounds"></CDPChannel></TPDO>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="FBStatusWord" Type="unsigned short" Description="FBStatusWord (ID 65)"></CDPChannel>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="ShaftRounds" Type="short" Description="Shaft Rounds (ID 1170)" Unit="rounds"></CDPChannel></TPDO>
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO22" Nr="22" COBID="1152">
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DCLinkVoltage" Type="unsigned short" Value="0" Description="DC Link voltage (ID 7)" Unit="V"></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="MotorTorque" Type="short" Value="0" Description="Motor Torque (ID 4)" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DCLinkVoltage" Type="unsigned short" Description="DC Link voltage (ID 7)" Unit="V"></CDPChannel>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="MotorTorque" Type="short" Description="Motor Torque (ID 4)" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="10" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="1" Type="double"></ScalingPoint></Operator></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DINStatusWord" Type="unsigned short" Value="0" Description="DINStatusWord containing info about: Emergency-control, Brake Open feedback (ID 56)"></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="LastActiveFault" Type="short" Value="0" Description="Last Active Fault (ID 37)"></CDPChannel></TPDO>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DINStatusWord" Type="unsigned short" Description="DINStatusWord containing info about: Emergency-control, Brake Open feedback (ID 56)"></CDPChannel>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="LastActiveFault" Type="short" Description="Last Active Fault (ID 37)"></CDPChannel></TPDO>
         <RPDO AdjustWithNodeAddress="1" Input="0" Model="CANOpenMaster.RPDO" Name="RPDO21" Nr="21" COBID="1024">
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="FBControlWord" Type="unsigned short" Value="0" Description="Control word"></CDPChannel>
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="SpeedRef" Type="short" Value="0" Description="Speed reference" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="FBControlWord" Type="unsigned short" Description="Control word"></CDPChannel>
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="SpeedRef" Type="short" Description="Speed reference" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="1" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="100" Type="double"></ScalingPoint></Operator></CDPChannel>
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="TorqueRef" Type="short" Value="0" Description="Torque Reference (ID 1140)" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="TorqueRef" Type="short" Description="Torque Reference (ID 1140)" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="1" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="10" Type="double"></ScalingPoint></Operator></CDPChannel>
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="TorqueLimMot" Type="short" Value="0" Description="Torque Limit Motoring (ID 1287)" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="TorqueLimMot" Type="short" Description="Torque Limit Motoring (ID 1287)" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="1" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="10" Type="double"></ScalingPoint></Operator></CDPChannel></RPDO>
         <RPDO AdjustWithNodeAddress="1" Input="0" Model="CANOpenMaster.RPDO" Name="RPDO22" Nr="22" COBID="1280">
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="TorqueLimGen" Type="short" Value="0" Description="Torque Limit Generatoring (ID 1288)" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="TorqueLimGen" Type="short" Description="Torque Limit Generatoring (ID 1288)" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="1" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="10" Type="double"></ScalingPoint></Operator></CDPChannel>
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="PowerLimMot" Type="short" Value="0" Description="Power Limit Motoring (ID 1289)" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="PowerLimMot" Type="short" Description="Power Limit Motoring (ID 1289)" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="1" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="10" Type="double"></ScalingPoint></Operator></CDPChannel>
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="PowerLimGen" Type="short" Value="0" Description="Power Limit Generatoring (ID 1290)" Unit="%">
-            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double" Value="0">
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="PowerLimGen" Type="short" Description="Power Limit Generatoring (ID 1290)" Unit="%">
+            <Operator Interpolation="Linear" Model="Automation.ScalingOperator&lt;double&gt;" Name="Scaling" Type="double">
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="1" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="10" Type="double"></ScalingPoint></Operator></CDPChannel>
-          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="processdata_in6" Type="short" Value="0" Description="Currently not in use"></CDPChannel></RPDO>
+          <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="processdata_in6" Type="short" Description="Currently not in use"></CDPChannel></RPDO>
 
         <ObjectDictionary>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6165" Model="CANOpenIOServer.CustomODEntry" Name="TPDO22 Transmission type" Subindex="2" Value="5" Description="Send TPDO22 at every 5th SYNC"></Entry>
@@ -217,13 +216,18 @@
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="4108" Model="CANOpenIOServer.CustomODEntry" Name="Guard Time" Subindex="0" Value="100" Unit="ms" Description="Guard time used by node"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="4109" Model="CANOpenIOServer.CustomODEntry" Name="Life Time" Subindex="0" Value="3" Description="Life time used by node"></Entry>
         </ObjectDictionary></Node>
-      <Node Address="63" GuardTime="0.2000000000000000111" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="KublerF5888" Slave="0" Heartbeat="1" UseSDODataSize="1" Fs="100" Description="Kübler F5888" NodeType="NX OPT-E6 INU">
+      <Node Address="63" GuardTime="0.2000000000000000111" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="KublerF5888" Slave="0" Heartbeat="1" UseSDODataSize="1" Fs="100" Description="Kübler F5888">
         <TPDO AdjustWithNodeAddress="0" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO1" Nr="1" Description="Position scaled according to Operating Parameters">
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned int&gt;" Name="Position" Type="unsigned int" Description="Position value"></CDPChannel></TPDO>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned int&gt;" Name="Position" Type="unsigned int"></CDPChannel></TPDO>
+        <TPDO AdjustWithNodeAddress="0" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO3" Nr="3" Description="Speed in RPM">
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="Speed" Type="short"></CDPChannel></TPDO>
 
         <ObjectDictionary>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="4119" Model="CANOpenIOServer.HeartbeatPTimeODEntry" Name="HeartbeatPTimeODEntry" Subindex="0" Unit="ms" Value="200"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="24576" Model="CANOpenIOServer.CustomHexODEntry" Name="Operating Parameters" Subindex="0" Value="4" Description="Bit 0 (0x1): CW/CCW, Bit 2 (0x4): Scaling off/on, Bit 12 (0x1000): rpm / units/s. Note bit 12, not bit 13 on this encoder!"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="24625" Model="CANOpenIOServer.CustomODEntry" Name="Speed Integration Time" Subindex="2" Value="10" Unit="ms" Description="Speed integration time in ms"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="24625" Model="CANOpenIOServer.CustomHexODEntry" Name="Speed calculation multiplier" Subindex="3" Value="1" Description="Speed signal is scaled up with this factor"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="24625" Model="CANOpenIOServer.CustomHexODEntry" Name="Speed calculation divisor" Subindex="4" Value="1" Description="Speed signal is scaled down with this factor"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned int" Index="24577" Model="CANOpenIOServer.CustomHexODEntry" Name="Measuring units per revolution" Subindex="0" Value="8192" Description="Number of steps per revolution. Only valid if scaling is enabled by bit 2 in Operating Parameters, index 6000."></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned int" Index="24578" Model="CANOpenIOServer.CustomHexODEntry" Name="Total number of measuring units" Subindex="0" Value="33554432" Description="Total numer of steps in whole range (special case: 0=32 bit range=2^32)"></Entry>
           <Entry AdjustWithNodeAddress="1" CurrentValue="0" DataType="unsigned int" Index="6144" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO1 disable" Subindex="1" Value="2147484032" Description="Value=0x80000180 + nodenr = TPDO1 disable."></Entry>
@@ -231,10 +235,15 @@
           <Entry AdjustWithNodeAddress="1" CurrentValue="0" DataType="unsigned int" Index="6146" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO3 disable" Subindex="1" Value="2147484544" Description="Value=0x80000380 + nodenr = TPDO3 disable. "></Entry>
           <Entry AdjustWithNodeAddress="1" CurrentValue="0" DataType="unsigned int" Index="6147" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO4 disable" Subindex="1" Value="2147484800" Description="Value=0x80000380 + nodenr = TPDO3 disable. "></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6656" Model="CANOpenIOServer.CustomODEntry" Name="TPDO1 Clear number of entries" Subindex="0" Value="0" Description="Set nr entries for TPDO1 to 0 before changing PDO mapping"></Entry>
-          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned int" Index="6656" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO1 mapping 1 (pos)" Subindex="1" Value="1610874912" Description="Mapping TPDO1, Object 6004, Subindex 0, position value, data size 32-bit"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned int" Index="6656" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO1 mapping (pos)" Subindex="1" Value="1610874912" Description="Mapping TPDO1, Object 6004, Subindex 0, position value, data size 32-bit"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6656" Model="CANOpenIOServer.CustomODEntry" Name="TPDO1 Set number of entries" Subindex="0" Value="1" Description="Set number of mapped objects after mapping is finished"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6144" Model="CANOpenIOServer.CustomODEntry" Name=" TPDO1 transmission type" Subindex="2" Value="1" Description="Send TPDO1 with every SYNC"></Entry>
           <Entry AdjustWithNodeAddress="1" CurrentValue="0" DataType="unsigned int" Index="6144" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO1 - COB-ID" Subindex="1" Value="384" Description="TPDO1 enable"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6658" Model="CANOpenIOServer.CustomODEntry" Name="TPDO3 Clear number of entries" Subindex="0" Value="0" Description="Set nr entries for TPDO1 to 0 before changing PDO mapping"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="int" Index="6658" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO3 mapping (speed)" Subindex="1" Value="1613758736" Description="Mapping TPDO2, Object 6030, Subindex 1, speed, data size 16-bit"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6658" Model="CANOpenIOServer.CustomODEntry" Name="TPDO3 Set number of entries" Subindex="0" Value="1" Description="Set number of mapped objects after mapping is finished"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6146" Model="CANOpenIOServer.CustomODEntry" Name=" TPDO3 transmission type" Subindex="2" Value="1" Description="Send TPDO3 with every SYNC"></Entry>
+          <Entry AdjustWithNodeAddress="1" CurrentValue="0" DataType="unsigned int" Index="6146" Model="CANOpenIOServer.CustomHexODEntry" Name="TPDO3 - COB-ID" Subindex="1" Value="896" Description="TPDO3 enable"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="8450" Model="CANOpenIOServer.CustomHexODEntry" Name="Can-Bus Termination" Subindex="0" Value="0"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned int" Index="8453" Model="CANOpenIOServer.CustomHexODEntry" Name="Save All Bus Parameters" Subindex="0" Value="1702257011"></Entry>
         </ObjectDictionary></Node>

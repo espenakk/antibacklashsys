@@ -82,7 +82,7 @@
         <Connection Input="0" LocalName=".SpeedActual" Model="CDPPortConnection" Name="MapSpeedActual"></Connection>
         <Connection Input="0" LocalName=".TorqueActual" Model="CDPPortConnection" Name="MapTorqueActual"></Connection>
       </Connections></Port>
-    <Port Input="1" Model="VaconLib.FCIOPort" Name="FCIOPort" Routing="AntiBacklashApp.CANOpenPCIIOServer.FC1">
+    <Port Input="1" Model="VaconLib.FCIOPort" Name="FCIOPort" Routing="..CANOpenPCIIOServer.FC1">
 
       <Connections>
         <Connection Input="1" LocalName=".OnlineState" Model="CDPPortConnection" Name="MapOnlineState" RemoteName=".NodeState"></Connection>

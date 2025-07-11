@@ -6,5 +6,4 @@ DISTFILES += $$files(*.xml, false)
 
 SUBDIRS +=     \
     AntiBacklashApp \
-    TestGUI \
-    WebGUI
+    GUI

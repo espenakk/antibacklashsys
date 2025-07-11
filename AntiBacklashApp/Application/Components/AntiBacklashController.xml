@@ -1,4 +1,4 @@
-<Component Model="AntiBacklashLib.AntiBacklashController" Name="AntiBacklashController" src="Components/AntiBacklashController.xml" Description="Controller for anti backlash testing">
+<Component Model="AntiBacklashLib.AntiBacklashController" Name="AntiBacklashController" src="Components/AntiBacklashController.xml" Description="Controller for anti backlash testing" Activate="1">
   <SchedulingOrder>TopDown</SchedulingOrder>
   <SchedulingGroup>Default</SchedulingGroup>
   <fs>5</fs>
@@ -8,6 +8,12 @@
     <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="dirC" Type="bool"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="elapsedTime" Type="double"></Signal>
+    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="startAntibacklashTestButton" Type="bool"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="runningAntiBacklashTestScript" Type="bool"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="exportData" Type="bool"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="scaledEncSpeed" Type="int"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="scaledEncPosition" Type="int"></Signal>
   </Signals>
 
   <Alarms>
@@ -84,7 +90,7 @@
 
       <Connections>
         <Connection Input="1" LocalName=".position" Model="CDPPortConnection" Name="Mapposition"></Connection>
-        <Connection Input="1" LocalName=".velocity" Model="CDPPortConnection" Name="Mapvelocity" RemoteName=".TPDO1.Speed"></Connection>
+        <Connection Input="1" LocalName=".speed" Model="CDPPortConnection" Name="Mapspeed" RemoteName=".TPDO3.Speed"></Connection>
       </Connections></Port>
   </Ports>
 </Component>
