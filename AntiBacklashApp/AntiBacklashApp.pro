@@ -1,7 +1,7 @@
 TYPE = application
 PROJECTNAME = AntiBacklashApp
 
-DEPS += antibacklashlib canopenio operationutilities vaconlib
+DEPS += antibacklashlib canopenio cdplogger cdpmodel modbusio operationutilities vaconlib
 
 HEADERS += Libraries.h
 SOURCES += CDPMain.cpp

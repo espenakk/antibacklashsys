@@ -408,6 +408,12 @@
     <property name="text">
      <string>dirC</string>
     </property>
+    <property name="font" stdset="0">
+     <font>
+      <family>Bitstream Charter</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="cdpRouting" stdset="0">
      <string>AntiBacklashApp.AntiBacklashController.dirC.Value</string>
     </property>
@@ -424,11 +430,14 @@
     <property name="toolTipDuration">
      <number>5</number>
     </property>
-    <property name="numPrecision" stdset="0">
+    <property name="minorTicks">
      <number>1</number>
     </property>
+    <property name="numPrecision" stdset="0">
+     <number>0</number>
+    </property>
     <property name="minValue">
-     <double>0.000000000000000</double>
+     <double>-100.000000000000000</double>
     </property>
     <property name="valueMinNormal">
      <double>0.000000000000000</double>
@@ -449,7 +458,7 @@
      <bool>true</bool>
     </property>
     <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.userVelocityCmdC.Value</string>
+     <string>AntiBacklashApp.AntiBacklashController.speedCmdC.Value</string>
     </property>
     <property name="pushRoutables" stdset="0">
      <stringlist notr="true">
@@ -473,6 +482,12 @@
     </property>
     <property name="text">
      <string>dirAB</string>
+    </property>
+    <property name="font" stdset="0">
+     <font>
+      <family>Bitstream Charter</family>
+      <pointsize>11</pointsize>
+     </font>
     </property>
     <property name="cdpRouting" stdset="0">
      <string>AntiBacklashApp.AntiBacklashController.dir.Value</string>
@@ -503,11 +518,14 @@
     <property name="toolTipDuration">
      <number>5</number>
     </property>
-    <property name="numPrecision" stdset="0">
+    <property name="minorTicks">
      <number>1</number>
     </property>
+    <property name="numPrecision" stdset="0">
+     <number>0</number>
+    </property>
     <property name="minValue">
-     <double>0.000000000000000</double>
+     <double>-100.000000000000000</double>
     </property>
     <property name="valueMinNormal">
      <double>0.000000000000000</double>
@@ -528,7 +546,7 @@
      <bool>true</bool>
     </property>
     <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.userVelocityCmdB.Value</string>
+     <string>AntiBacklashApp.AntiBacklashController.speedCmdB.Value</string>
     </property>
     <property name="pushRoutables" stdset="0">
      <stringlist notr="true">
@@ -553,6 +571,12 @@
     <property name="text">
      <string>Enabled</string>
     </property>
+    <property name="font" stdset="0">
+     <font>
+      <family>Bitstream Charter</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="cdpRouting" stdset="0">
      <string>AntiBacklashApp.AntiBacklashController.enabled.Value</string>
     </property>
@@ -569,11 +593,23 @@
     <property name="toolTipDuration">
      <number>5</number>
     </property>
+    <property name="tickPos">
+     <enum>CDPBaseTickMarks::NoTicks</enum>
+    </property>
+    <property name="majorTicks">
+     <double>10.000000000000000</double>
+    </property>
+    <property name="minorTicks">
+     <number>10</number>
+    </property>
+    <property name="minorTickLength">
+     <number>10</number>
+    </property>
     <property name="numPrecision" stdset="0">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="minValue">
-     <double>0.000000000000000</double>
+     <double>-100.000000000000000</double>
     </property>
     <property name="valueMinNormal">
      <double>0.000000000000000</double>
@@ -594,7 +630,7 @@
      <bool>true</bool>
     </property>
     <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.userVelocityCmdA.Value</string>
+     <string>AntiBacklashApp.AntiBacklashController.speedCmdA.Value</string>
     </property>
     <property name="pushRoutables" stdset="0">
      <stringlist notr="true">
@@ -618,6 +654,12 @@
     </property>
     <property name="text">
      <string>Enabled</string>
+    </property>
+    <property name="font" stdset="0">
+     <font>
+      <family>Bitstream Charter</family>
+      <pointsize>11</pointsize>
+     </font>
     </property>
     <property name="cdpRouting" stdset="0">
      <string>AntiBacklashApp.AntiBacklashController.loadEnabled.Value</string>
@@ -671,10 +713,11 @@
     </property>
     <property name="cdpSignals">
      <stringlist>
-      <string>AntiBacklashApp.AntiBacklashController.scaledEncSpeed</string>
+      <string>AntiBacklashApp.AntiBacklashController.FC1.SpeedRef</string>
       <string>AntiBacklashApp.AntiBacklashController.FC1.SpeedActual</string>
       <string>AntiBacklashApp.AntiBacklashController.FC2.SpeedActual</string>
       <string>AntiBacklashApp.AntiBacklashController.FC3.SpeedActual</string>
+      <string>AntiBacklashApp.AntiBacklashController.scaledEncSpeed</string>
      </stringlist>
     </property>
     <property name="plottingMode">
@@ -698,10 +741,10 @@
      <UInt>5</UInt>
     </property>
     <property name="yAxisMinValue">
-     <double>-100.000000000000000</double>
+     <double>-10.000000000000000</double>
     </property>
     <property name="yAxisMaxValue">
-     <double>100.000000000000000</double>
+     <double>10.000000000000000</double>
     </property>
     <property name="yAxisFont">
      <font>
@@ -772,10 +815,10 @@
      <UInt>5</UInt>
     </property>
     <property name="yAxisMinValue">
-     <double>-10.000000000000000</double>
+     <double>-7.000000000000000</double>
     </property>
     <property name="yAxisMaxValue">
-     <double>10.000000000000000</double>
+     <double>7.000000000000000</double>
     </property>
     <property name="yAxisFont">
      <font>
@@ -798,6 +841,33 @@
     </property>
     <property name="exportFormat">
      <enum>CDP::GraphWidgets::GraphExport::CSV</enum>
+    </property>
+   </widget>
+   <widget class="CDPBaseCheckBox" name="EnableDebugMode">
+    <property name="geometry">
+     <rect>
+      <x>1510</x>
+      <y>170</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist>
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+    <property name="text">
+     <string>Debug mode</string>
+    </property>
+    <property name="font" stdset="0">
+     <font>
+      <family>Bitstream Charter</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.debugMode.Value</string>
     </property>
    </widget>
    <zorder>AblLamp</zorder>
@@ -824,6 +894,7 @@
    <zorder>ElapsedTime</zorder>
    <zorder>signalGraph_3</zorder>
    <zorder>signalGraph_2</zorder>
+   <zorder>EnableDebugMode</zorder>
   </widget>
  </widget>
  <customwidgets>

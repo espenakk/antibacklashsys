@@ -9,7 +9,7 @@
   <CDPVersion>4.11</CDPVersion>
   <Domain>AntiBacklash</Domain>
 
-  <NetworkInterface Name="ETH0" MAC="" IPAddress="192.168.150.150" SubnetMask="255.255.255.0"></NetworkInterface>
+  <NetworkInterface Name="ETH0" MAC="" IPAddress="192.168.150.100" SubnetMask="255.255.255.0"></NetworkInterface>
 
   <Subcomponents>
     <Subcomponent Name="CDP"        Model="CDP"        src="Components\CDP.xml"></Subcomponent>
@@ -18,6 +18,7 @@
     <Subcomponent Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC61" src="Components/VaconMarineAppFCC61.xml"></Subcomponent>
     <Subcomponent Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC62" src="Components/VaconMarineAppFCC62.xml"></Subcomponent>
     <Subcomponent Model="AntiBacklashLib.AntiBacklashController" Name="AntiBacklashController" src="Components/AntiBacklashController.xml"></Subcomponent>
+    <Subcomponent Model="CDPLogger.CDPLogger" Name="CDPLogger" src="Components/CDPLogger.xml"></Subcomponent>
   </Subcomponents>
 
   <Signals>

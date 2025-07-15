@@ -1,0 +1,40 @@
+<Component Model="CDPLogger.CDPLogger" Name="CDPLogger" src="Components/CDPLogger.xml" Description="Component for logging CDP signals to a Datastore.">
+  <SizeAlarmGB>0</SizeAlarmGB>
+  <ServerPort>17000</ServerPort>
+  <PeriodicLogFrequency>100</PeriodicLogFrequency>
+  <InMemoryLogging>0</InMemoryLogging>
+  <BufferSpanMinutes>0</BufferSpanMinutes>
+  <SchedulingOrder>TopDown</SchedulingOrder>
+  <SchedulingGroup>Default</SchedulingGroup>
+  <fs>10</fs>
+  <Status>0</Status>
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+    <Signal Description="The number of samples the logger skipped when the application was overloaded during the last 60 seconds." Input="0" Model="CDPSignal&lt;int&gt;" Name="SamplesDroppedLastMinute" Type="int" Unit="samples per minute">
+      <Operator Deadband="0" DelayOff="0" DelayOn="0" Description="Triggers an alarm when the logger drops samples." Group="" InputMask="18446744073709551615" LastSetTime="" Level="Warning" Limit="1" LimitType="Above" Model="Automation.AlarmOperator&lt;int&gt;" Name="Alarm" RepeatCountLimit="0" RepeatDecrementTime="0" Text="Logger overloaded, dropping samples! Consider reducing the PeriodicLogFrequency." Type="int"></Operator></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+    <Alarm Description="The database has reached the maximum size." Name="SizeAlarm"></Alarm>
+    <Alarm Description="Error when logging to database." Name="LoggerAlarm"></Alarm>
+  </Alarms>
+
+  <LoggedValues>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="SpeedRef" Routing="AntiBacklashApp.AntiBacklashController.FC1.SpeedRef"></LoggedValue>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="FC1SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC1.SpeedActual"></LoggedValue>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="FC2SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC2.SpeedActual"></LoggedValue>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="FC3SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC3.SpeedActual"></LoggedValue>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="scaledEncSpeed" Routing="AntiBacklashApp.AntiBacklashController.scaledEncSpeed"></LoggedValue>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="FC1TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC1.TorqueActual"></LoggedValue>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="FC2TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC2.TorqueActual"></LoggedValue>
+    <LoggedValue Delta="1" Description="Description of logged element." Name="FC3TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC3.TorqueActual"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="rawEncPosition" Routing="AntiBacklashApp.AntiBacklashController.ENC1.position"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="rawEncSpeed" Routing="AntiBacklashApp.AntiBacklashController.ENC1.speed"></LoggedValue>
+  </LoggedValues>
+  <Datastore DBName="" DaysOfHistory="0" Description="Datastore that packs data into keyframes for faster access.
+        Optimized for storing values changing with different intervals." Model="CDPLogger.CDPCompactDatastore" Name="CDPCompactDatastore" SizeLimitGB="0"></Datastore>
+</Component>

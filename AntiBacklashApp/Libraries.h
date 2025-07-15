@@ -3,6 +3,7 @@
 #include <automation.h>
 #include <canopenio.h>
 #include <cdpeventmanager.h>
+#include <cdplogger.h>
 #include <operationutilities.h>
 #include <securitylib.h>
 #include <vaconlib.h>
