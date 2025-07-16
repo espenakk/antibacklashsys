@@ -20,7 +20,8 @@
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="antiBacklashEnabled" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="exportData" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="elapsedTime" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="scaledEncSpeed" Type="int"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="scaledEncSpeed" Type="double"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="scaledEncPosition" Type="double"></Signal>
   </Signals>
 
   <Alarms>

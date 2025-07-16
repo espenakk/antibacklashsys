@@ -24,16 +24,17 @@
   </Alarms>
 
   <LoggedValues>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="SpeedRef" Routing="AntiBacklashApp.AntiBacklashController.FC1.SpeedRef"></LoggedValue>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="FC1SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC1.SpeedActual"></LoggedValue>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="FC2SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC2.SpeedActual"></LoggedValue>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="FC3SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC3.SpeedActual"></LoggedValue>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="scaledEncSpeed" Routing="AntiBacklashApp.AntiBacklashController.scaledEncSpeed"></LoggedValue>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="FC1TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC1.TorqueActual"></LoggedValue>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="FC2TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC2.TorqueActual"></LoggedValue>
-    <LoggedValue Delta="1" Description="Description of logged element." Name="FC3TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC3.TorqueActual"></LoggedValue>
-    <LoggedValue Delta="0" Description="Description of logged element." Name="rawEncPosition" Routing="AntiBacklashApp.AntiBacklashController.ENC1.position"></LoggedValue>
-    <LoggedValue Delta="0" Description="Description of logged element." Name="rawEncSpeed" Routing="AntiBacklashApp.AntiBacklashController.ENC1.speed"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="SpeedRef" Routing="AntiBacklashApp.AntiBacklashController.FC1.SpeedRef"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC1SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC1.SpeedActual"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC2SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC2.SpeedActual"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC3SpeedActual" Routing="AntiBacklashApp.AntiBacklashController.FC3.SpeedActual"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC1TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC1.TorqueActual"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC2TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC2.TorqueActual"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC3TorqueActual" Routing="AntiBacklashApp.AntiBacklashController.FC3.TorqueActual"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="rawEncPosition" Routing="AntiBacklashApp.AntiBacklashController.ENC1.position"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="rawEncSpeed" Routing="AntiBacklashApp.AntiBacklashController.ENC1.speed"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="scaledEncSpeed" Routing="AntiBacklashApp.AntiBacklashController.scaledEncSpeed"></LoggedValue>
+    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="antiBacklashEnabled" Routing="AntiBacklashApp.AntiBacklashController.antiBacklashEnabled"></LoggedValue>
   </LoggedValues>
   <Datastore DBName="" DaysOfHistory="0" Description="Datastore that packs data into keyframes for faster access.
         Optimized for storing values changing with different intervals." Model="CDPLogger.CDPCompactDatastore" Name="CDPCompactDatastore" SizeLimitGB="0"></Datastore>
