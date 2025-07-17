@@ -18,10 +18,15 @@
     <Signal Input="1" Model="CDPSignal&lt;double&gt;" Name="speedCmdC" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="runningAntiBacklashTestScript" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="antiBacklashEnabled" Type="bool"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="exportData" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="elapsedTime" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="scaledEncSpeed" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="scaledEncPosition" Type="double"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Speed" Type="double"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Speed" Type="double"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Torque" Type="double"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Torque" Type="double"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC3Torque" Type="double"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FCSpeedRef" Type="double" Unit="rad/s"></Signal>
   </Signals>
 
   <Alarms>
