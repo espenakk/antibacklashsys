@@ -288,6 +288,9 @@
     <property name="text">
      <string/>
     </property>
+    <property name="icon">
+     <iconset theme="document-properties"/>
+    </property>
     <property name="widgetPicture">
      <number>0</number>
     </property>

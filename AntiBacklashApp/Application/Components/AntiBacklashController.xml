@@ -88,4 +88,17 @@
         <Connection Input="1" LocalName=".speed" Model="CDPPortConnection" Name="Mapspeed" RemoteName=".TPDO3.Speed"></Connection>
       </Connections></Port>
   </Ports>
+
+  <Parameters>
+    <Parameter Name="loadTorqueLimit" Unit="Nm" Value="2"></Parameter>
+    <Parameter Name="maxTorque" Unit="Nm" Value="10"></Parameter>
+    <Parameter Name="maxSpeed" Unit="rad/s"></Parameter>
+    <Parameter Name="minSpeed" Unit="rad/s"></Parameter>
+    <Parameter Name="slowdownRange" Unit="Degrees" Value="50"></Parameter>
+    <Parameter Name="degMargin" Unit="Degrees" Value="10"></Parameter>
+    <Parameter Name="slaveTorque" Unit="%" Value="15"></Parameter>
+    <Parameter Name="masterDroop" Unit="%"></Parameter>
+    <Parameter Name="slaveDroop" Unit="%"></Parameter>
+    <Parameter Name="loadDroop" Unit="%"></Parameter>
+  </Parameters>
 </Component>
