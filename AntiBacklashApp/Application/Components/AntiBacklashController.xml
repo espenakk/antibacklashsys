@@ -8,15 +8,8 @@
     <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
     <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="startAntibacklashTestButton" Type="bool"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="dir" Type="bool"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="dirC" Type="bool"></Signal>
     <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="enabled" Type="bool"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="loadEnabled" Type="bool"></Signal>
     <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="debugMode" Type="bool"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;double&gt;" Name="speedCmdA" Type="double"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;double&gt;" Name="speedCmdB" Type="double"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;double&gt;" Name="speedCmdC" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="runningAntiBacklashTestScript" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="antiBacklashEnabled" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="elapsedTime" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="scaledEncSpeed" Type="double"></Signal>
@@ -27,6 +20,7 @@
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Torque" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC3Torque" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FCSpeedRef" Type="double" Unit="rad/s"></Signal>
+    <Signal Input="1" Model="CDPSignal&lt;double&gt;" Name="speedCmd" Type="double" Unit="rad/s"></Signal>
   </Signals>
 
   <Alarms>
@@ -101,9 +95,7 @@
     <Parameter Name="minSpeed" Unit="rad/s"></Parameter>
     <Parameter Name="slowdownRange" Unit="Degrees" Value="50"></Parameter>
     <Parameter Name="degMargin" Unit="Degrees" Value="10"></Parameter>
-    <Parameter Name="slaveTorque" Unit="%" Value="15"></Parameter>
-    <Parameter Name="masterDroop" Unit="%"></Parameter>
-    <Parameter Name="slaveDroop" Unit="%"></Parameter>
-    <Parameter Name="loadDroop" Unit="%"></Parameter>
+    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="1"></Parameter>
+    <Parameter Name="slaveTorqueGain" Value="3"></Parameter>
   </Parameters>
 </Component>
