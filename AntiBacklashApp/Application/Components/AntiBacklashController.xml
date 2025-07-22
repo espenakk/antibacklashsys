@@ -93,9 +93,11 @@
     <Parameter Name="maxTorque" Unit="Nm" Value="10"></Parameter>
     <Parameter Name="maxSpeed" Unit="rad/s"></Parameter>
     <Parameter Name="minSpeed" Unit="rad/s"></Parameter>
-    <Parameter Name="slowdownRange" Unit="Degrees" Value="50"></Parameter>
-    <Parameter Name="degMargin" Unit="Degrees" Value="10"></Parameter>
-    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="1"></Parameter>
-    <Parameter Name="slaveTorqueGain" Value="3"></Parameter>
+    <Parameter Name="slowdownRange" Unit="Degrees" Value="60"></Parameter>
+    <Parameter Name="degMargin" Unit="Degrees" Value="20"></Parameter>
+    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="3"></Parameter>
+    <Parameter Name="slaveTorqueGain" Value="0"></Parameter>
+    <Parameter Name="rampDuration" Unit="s" TimeLastChanged="" Value="1.5"></Parameter>
+    <Parameter Name="constSpeedDuration" TimeLastChanged="" Value="2"></Parameter>
   </Parameters>
 </Component>
