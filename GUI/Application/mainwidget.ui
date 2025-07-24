@@ -404,7 +404,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Slave torque base</string>
+     <string>--</string>
     </property>
     <property name="svgFile">
      <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -428,7 +428,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Slave torque gain</string>
+     <string>--</string>
     </property>
     <property name="svgFile">
      <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -456,6 +456,178 @@
     </property>
     <property name="cdpRouting" stdset="0">
      <string>AntiBacklashApp.AntiBacklashController.elapsedTime.Value</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLineEdit" name="offset">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>380</y>
+      <width>148</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.offset.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseLineEdit" name="offset_2">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>380</y>
+      <width>148</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.slaveDroop.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseLineEdit" name="offset_3">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>410</y>
+      <width>148</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.masterDroop.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseLineEdit" name="offset_4">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>460</y>
+      <width>148</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.rampDuration.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseLineEdit" name="offset_5">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>490</y>
+      <width>148</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>--</string>
+    </property>
+    <property name="svgFile">
+     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>AntiBacklashApp.AntiBacklashController.constSpeedDuration.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist notr="true">
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>410</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Offset</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>520</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Torque</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>440</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Droop</string>
+    </property>
+   </widget>
+   <widget class="CDPBaseLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>520</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ramp/constspeed</string>
     </property>
    </widget>
   </widget>

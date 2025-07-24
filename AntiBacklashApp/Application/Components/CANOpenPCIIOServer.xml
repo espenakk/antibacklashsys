@@ -53,7 +53,7 @@
       <BroadcastResetCommunicationAtStartup>0</BroadcastResetCommunicationAtStartup>
       <SynchFs>100</SynchFs>
       <BroadcastResetNodeAtStartup>1</BroadcastResetNodeAtStartup>
-      <Node Address="1" GuardTime="0.10000000000000000555" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="FC1" Slave="0" UseSDODataSize="1" NodeType="NX OPT-C6 INU" Description="VaconFC controlling M101, using OPT-C6 CANopen option board.">
+      <Node Address="1" GuardTime="0.10000000000000000555" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="FC1" Slave="0" UseSDODataSize="1" NodeType="NX OPT-C6 INU" Description="VaconFC controlling M101, using OPT-C6 CANopen option board." Fs="100">
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO1" Nr="1" COBID="384">
           <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DPStatusWord" Type="unsigned short" Description="Status word for DriveProfile. Also valid in Bypass modes."></CDPChannel></TPDO>
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO21" Nr="21" COBID="896">
@@ -108,7 +108,7 @@
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="4108" Model="CANOpenIOServer.CustomHexODEntry" Name="Guard Time" Subindex="0" Value="100" Unit="ms" Description="Guard time used by node"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="4109" Model="CANOpenIOServer.CustomHexODEntry" Name="Life Time Factor" Subindex="0" Value="3" Description="Life time used by node"></Entry>
         </ObjectDictionary></Node>
-      <Node Address="2" GuardTime="0.10000000000000000555" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="FC2" Slave="0" UseSDODataSize="1" NodeType="NX OPT-C6 INU" Description="VaconFC controlling M101, using OPT-C6 CANopen option board.">
+      <Node Address="2" GuardTime="0.10000000000000000555" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="FC2" Slave="0" UseSDODataSize="1" NodeType="NX OPT-C6 INU" Description="VaconFC controlling M101, using OPT-C6 CANopen option board." Fs="100">
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO1" Nr="1" COBID="384">
           <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DPStatusWord" Type="unsigned short" Value="0" Description="Status word for DriveProfile. Also valid in Bypass modes."></CDPChannel></TPDO>
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO21" Nr="21" COBID="896">
@@ -162,7 +162,7 @@
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="4108" Model="CANOpenIOServer.CustomODEntry" Name="Guard Time" Subindex="0" Value="100" Unit="ms" Description="Guard time used by node"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="4109" Model="CANOpenIOServer.CustomODEntry" Name="Life Time" Subindex="0" Value="3" Description="Life time used by node"></Entry>
         </ObjectDictionary></Node>
-      <Node Address="9" GuardTime="0.10000000000000000555" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="FC3" Slave="0" UseSDODataSize="1" NodeType="NX OPT-C6 INU" Description="VaconFC controlling M101, using OPT-C6 CANopen option board.">
+      <Node Address="9" GuardTime="0.10000000000000000555" LifeTimeFactor="3" Model="CANOpenIOServer.MasterNode" Name="FC3" Slave="0" UseSDODataSize="1" NodeType="NX OPT-C6 INU" Description="VaconFC controlling M101, using OPT-C6 CANopen option board." Fs="100">
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO1" Nr="1" COBID="384">
           <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DPStatusWord" Type="unsigned short" Value="0" Description="Status word for DriveProfile. Also valid in Bypass modes."></CDPChannel></TPDO>
         <TPDO AdjustWithNodeAddress="1" Input="1" Model="CANOpenMaster.TPDO" Name="TPDO21" Nr="21" COBID="896">

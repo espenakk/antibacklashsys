@@ -1,7 +1,7 @@
 <Component Model="AntiBacklashLib.AntiBacklashController" Name="AntiBacklashController" src="Components/AntiBacklashController.xml" Description="Controller for anti backlash testing">
   <SchedulingOrder>TopDown</SchedulingOrder>
   <SchedulingGroup>Default</SchedulingGroup>
-  <fs>5</fs>
+  <fs>100</fs>
   <Status>0</Status>
 
   <Signals>
@@ -29,7 +29,7 @@
   </Alarms>
 
   <Ports>
-    <Port Input="0" Model="VaconLib.VaconMarineAppFCPort" Name="FC1">
+    <Port Input="0" Model="VaconLib.VaconMarineAppFCPort" Name="FC1" LoadDrooping="0">
 
       <Connections>
         <Connection Input="0" LocalName=".Enable" Model="CDPPortConnection" Name="MapEnable"></Connection>
@@ -46,7 +46,7 @@
         <Connection Input="1" LocalName=".SpeedActual" Model="CDPPortConnection" Name="MapSpeedActual"></Connection>
         <Connection Input="1" LocalName=".TorqueActual" Model="CDPPortConnection" Name="MapTorqueActual"></Connection>
       </Connections></Port>
-    <Port Input="0" Model="VaconLib.VaconMarineAppFCPort" Name="FC2">
+    <Port Input="0" Model="VaconLib.VaconMarineAppFCPort" Name="FC2" LoadDrooping="0">
 
       <Connections>
         <Connection Input="0" LocalName=".Enable" Model="CDPPortConnection" Name="MapEnable"></Connection>
@@ -95,9 +95,12 @@
     <Parameter Name="minSpeed" Unit="rad/s"></Parameter>
     <Parameter Name="slowdownRange" Unit="Degrees" Value="60"></Parameter>
     <Parameter Name="degMargin" Unit="Degrees" Value="20"></Parameter>
-    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="3"></Parameter>
+    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="0"></Parameter>
     <Parameter Name="slaveTorqueGain" Value="0"></Parameter>
-    <Parameter Name="rampDuration" Unit="s" TimeLastChanged="" Value="1.5"></Parameter>
+    <Parameter Name="rampDuration" Unit="s" TimeLastChanged="" Value="0.10000000000000000555"></Parameter>
     <Parameter Name="constSpeedDuration" TimeLastChanged="" Value="2"></Parameter>
+    <Parameter Name="offset" Unit="%" Value="1"></Parameter>
+    <Parameter Name="slaveDroop" Unit="%" Value="1"></Parameter>
+    <Parameter Name="masterDroop" Unit="%" Value="1"></Parameter>
   </Parameters>
 </Component>
