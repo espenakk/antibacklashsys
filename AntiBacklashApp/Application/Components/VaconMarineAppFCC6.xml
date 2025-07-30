@@ -103,7 +103,7 @@
   </Ports>
 
   <Parameters>
-    <Parameter Description="Invert direction of speed and torque" Max="1" Min="0" Name="InvertDirection" Unit="0/1" Value="0" Routing=""></Parameter>
+    <Parameter Description="Invert direction of speed and torque" Max="1" Min="0" Name="InvertDirection" Unit="0/1" Value="1" Routing=""></Parameter>
     <Parameter Description="Motor nominal speed (from motor rating plate)" Max="3000" Min="360" Name="MotorNomSpeed" Unit="rpm" Value="1400"></Parameter>
     <Parameter Description="Motor nominal frequency (from motor rating plate)" Max="60" Min="50" Name="MotorNomFreq" Unit="Hz" Value="50"></Parameter>
     <Parameter Description="Motor nominal current (from motor rating plate)" Name="MotorNomCurrent" Unit="A" Value="2.6200000000000001066"></Parameter>

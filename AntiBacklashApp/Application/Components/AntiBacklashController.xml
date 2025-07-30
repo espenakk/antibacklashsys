@@ -12,8 +12,6 @@
     <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="debugMode" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="antiBacklashEnabled" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="elapsedTime" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="scaledEncSpeed" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="scaledEncPosition" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Speed" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Speed" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Torque" Type="double"></Signal>
@@ -21,6 +19,8 @@
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC3Torque" Type="double"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FCSpeedRef" Type="double" Unit="rad/s"></Signal>
     <Signal Input="1" Model="CDPSignal&lt;double&gt;" Name="speedCmd" Type="double" Unit="rad/s"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="ENC1Speed" Type="double" Unit="rad/s"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="ENC1Position" Type="double" Unit="rad/s"></Signal>
   </Signals>
 
   <Alarms>
@@ -95,12 +95,12 @@
     <Parameter Name="minSpeed" Unit="rad/s"></Parameter>
     <Parameter Name="slowdownRange" Unit="Degrees" Value="60"></Parameter>
     <Parameter Name="degMargin" Unit="Degrees" Value="20"></Parameter>
-    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="0"></Parameter>
+    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="3"></Parameter>
     <Parameter Name="slaveTorqueGain" Value="0"></Parameter>
     <Parameter Name="rampDuration" Unit="s" TimeLastChanged="" Value="0.10000000000000000555"></Parameter>
     <Parameter Name="constSpeedDuration" TimeLastChanged="" Value="2"></Parameter>
-    <Parameter Name="offset" Unit="%" Value="1"></Parameter>
-    <Parameter Name="slaveDroop" Unit="%" Value="1"></Parameter>
-    <Parameter Name="masterDroop" Unit="%" Value="1"></Parameter>
+    <Parameter Name="offset" Unit="%" Value="0"></Parameter>
+    <Parameter Name="slaveDroop" Unit="%" Value="0"></Parameter>
+    <Parameter Name="masterDroop" Unit="%" Value="0"></Parameter>
   </Parameters>
 </Component>
