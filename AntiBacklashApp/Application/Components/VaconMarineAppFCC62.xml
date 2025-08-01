@@ -14,7 +14,7 @@
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
     <Signal Description="Stop drive by coasting (no torque)" Input="1" Model="CDPSignal&lt;bool&gt;" Name="StopByCoast" Type="bool" Value="1"></Signal>
     <Signal Description="Stop drive by ramp down" Input="1" Model="CDPSignal&lt;bool&gt;" Name="StopByRamp" Type="bool" Value="1"></Signal>
-    <Signal Description="Status flags from AFE." FlagDefinition="SFlagAFE" Input="1" Model="StatusFlags" Name="StatusAFE" Routing=".AFE.StatusFlags" Type="unsigned int"></Signal>
+    <Signal Description="Status flags from AFE." FlagDefinition="SFlagAFE" Input="1" Model="StatusFlags" Name="StatusAFE" Routing="" Type="unsigned int"></Signal>
     <Signal Description="Selects which StartFunction the drive shall use . 0=Ramp, 1=FlyingStart" Input="1" Model="CDPSignal&lt;int&gt;" Name="StartFunction" Type="int"></Signal>
     <Signal Description="Selects which StopFunction the drive shall use . 0=Coasting, 1=Ramp" Input="1" Model="CDPSignal&lt;int&gt;" Name="StopFunction" Type="int" Value="1"></Signal>
     <Signal Description="Output indicating running mode." Input="0" Model="CDPSignal&lt;bool&gt;" Name="DriveRunning" Type="bool" Unit="0/1"></Signal>
@@ -103,7 +103,7 @@
   </Ports>
 
   <Parameters>
-    <Parameter Description="Invert direction of speed and torque" Max="1" Min="0" Name="InvertDirection" Unit="0/1" Routing="AntiBacklashApp.AntiBacklashController.dirC" Value="0"></Parameter>
+    <Parameter Description="Invert direction of speed and torque" Max="1" Min="0" Name="InvertDirection" Unit="0/1" Routing="" Value="0"></Parameter>
     <Parameter Description="Motor nominal speed (from motor rating plate)" Max="3000" Min="360" Name="MotorNomSpeed" Unit="rpm" Value="1440"></Parameter>
     <Parameter Description="Motor nominal frequency (from motor rating plate)" Max="60" Min="50" Name="MotorNomFreq" Unit="Hz" Value="50"></Parameter>
     <Parameter Description="Motor nominal current (from motor rating plate)" Name="MotorNomCurrent" Unit="A" Value="14.300000000000000711"></Parameter>

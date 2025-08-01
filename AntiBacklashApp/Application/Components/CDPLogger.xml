@@ -24,16 +24,25 @@
   </Alarms>
 
   <LoggedValues>
-    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FCSpeedRef" Routing="AntiBacklashApp.AntiBacklashController.FCSpeedRef"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="SpeedRef" Routing="AntiBacklashApp.AntiBacklashController.SpeedRef"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="ENC1Speed" Routing="AntiBacklashApp.AntiBacklashController.ENC1Speed"></LoggedValue>
-    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC1Speed" Routing="AntiBacklashApp.AntiBacklashController.FC1Speed"></LoggedValue>
-    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC2Speed" Routing="AntiBacklashApp.AntiBacklashController.FC2Speed"></LoggedValue>
-    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC1Torque" Routing="AntiBacklashApp.AntiBacklashController.FC1Torque"></LoggedValue>
-    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC2Torque" Routing="AntiBacklashApp.AntiBacklashController.FC2Torque"></LoggedValue>
-    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="FC3Torque" Routing="AntiBacklashApp.AntiBacklashController.FC3Torque"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC1Speed" Routing="AntiBacklashApp.AntiBacklashController.FC1Speed"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC2Speed" Routing="AntiBacklashApp.AntiBacklashController.FC2Speed"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC1Torque" Routing="AntiBacklashApp.AntiBacklashController.FC1Torque"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC2Torque" Routing="AntiBacklashApp.AntiBacklashController.FC2Torque"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC3Torque" Routing="AntiBacklashApp.AntiBacklashController.FC3Torque"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="ENC1Position" Routing="AntiBacklashApp.AntiBacklashController.ENC1Position"></LoggedValue>
-    <LoggedValue Delta="0.10000000000000000555" Description="Description of logged element." Name="antiBacklashEnabled" Routing="AntiBacklashApp.AntiBacklashController.antiBacklashEnabled"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="AntiBacklashEnabled" Routing="AntiBacklashApp.AntiBacklashController.SimCmd.AntiBacklashEnabled"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="Offset" Routing="AntiBacklashApp.AntiBacklashController.Offset"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="BaseTorque" Routing="AntiBacklashApp.AntiBacklashController.SlaveTorqueBase"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="GainTorque" Routing="AntiBacklashApp.AntiBacklashController.SlaveTorqueGain"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="LoadTorque" Routing="AntiBacklashApp.AntiBacklashController.LoadTorqueLimit"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="MaxTorque" Routing="AntiBacklashApp.AntiBacklashController.MaxTorque"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="SlaveDroop" Routing="AntiBacklashApp.AntiBacklashController.SlaveDroop"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="MasterDroop" Routing="AntiBacklashApp.AntiBacklashController.MasterDroop"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="Running" Routing="AntiBacklashApp.AntiBacklashController.Running"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="TestIndex" Routing="AntiBacklashApp.AntiBacklashController.TestIndex"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="AntiBacklashMode" Routing="AntiBacklashApp.AntiBacklashController.AntiBacklashMode"></LoggedValue>
   </LoggedValues>
-  <Datastore DBName="" DaysOfHistory="0" Description="Datastore that packs data into keyframes for faster access.
-        Optimized for storing values changing with different intervals." Model="CDPLogger.CDPCompactDatastore" Name="CDPCompactDatastore" SizeLimitGB="0"></Datastore>
+  <Datastore Description="Logs data into a comma separated values (CSV) file. Note that logged data can&apos;t be viewed through CDP Studio Analyze mode, a third-party tool is required to analyze the data." FileName="log.csv" FileSizeLimit="0" Model="CDPLogger.CSVDatastore" Name="CSVDatastore" RolePermissions=""></Datastore>
 </Component>

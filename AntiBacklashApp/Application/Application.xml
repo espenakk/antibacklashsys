@@ -2,7 +2,7 @@
 
 <Application Name="AntiBacklashApp" Model="Application" Description=''>
   <ApplicationHandle>1</ApplicationHandle>
-  <fs>10</fs>
+  <fs>100</fs>
   <ClockSync>None</ClockSync>
   <IsTimeServer>0</IsTimeServer>
   <OSTimeInterval>120</OSTimeInterval>
@@ -19,6 +19,7 @@
     <Subcomponent Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC62" src="Components/VaconMarineAppFCC62.xml"></Subcomponent>
     <Subcomponent Model="AntiBacklashLib.AntiBacklashController" Name="AntiBacklashController" src="Components/AntiBacklashController.xml"></Subcomponent>
     <Subcomponent Model="CDPLogger.CDPLogger" Name="CDPLogger" src="Components/CDPLogger.xml"></Subcomponent>
+    <Subcomponent Model="AntiBacklashLib.SpeedCmdSim" Name="SpeedCmdSim" src="Components/SpeedCmdSim.xml"></Subcomponent>
   </Subcomponents>
 
   <Signals>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>600</height>
+    <width>700</width>
+    <height>630</height>
    </rect>
   </property>
   <property name="font">
@@ -43,17 +43,17 @@
    <widget class="CDPBaseLamp" name="AblLamp">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>150</y>
-      <width>121</width>
-      <height>121</height>
+      <x>360</x>
+      <y>540</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="svgFile">
      <string>:/themes/flat_gray_light/pictures/lampRing.svg</string>
     </property>
     <property name="cdpStyleRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.antiBacklashEnabled.Value</string>
+     <string>AntiBacklashApp.AntiBacklashController.SimCmd.AntiBacklashEnabled</string>
     </property>
     <property name="cdpRouting" stdset="0">
      <string/>
@@ -197,148 +197,6 @@
      <string>AntiBacklashApp.AntiBacklashController.FC1.SpeedActual</string>
     </property>
    </widget>
-   <widget class="CDPBaseLabel" name="Antibacklash">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>200</y>
-      <width>141</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Antibacklash</string>
-    </property>
-   </widget>
-   <widget class="CDPBaseButton" name="StartButton">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>10</y>
-      <width>121</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset theme="document-properties"/>
-    </property>
-    <property name="widgetPicture">
-     <number>0</number>
-    </property>
-    <property name="stylingType" stdset="0">
-     <enum>CDPBaseButton::Radio</enum>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/buttons/buttonRadio.svg</string>
-    </property>
-    <property name="svgParsing" stdset="0">
-     <enum>CDPBaseButton::ParseImages</enum>
-    </property>
-    <property name="padType">
-     <enum>CDPBaseButton::None</enum>
-    </property>
-    <property name="padInfoText1" stdset="0">
-     <string/>
-    </property>
-    <property name="padInfoText2" stdset="0">
-     <string/>
-    </property>
-    <property name="cdpPressedRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.startAntibacklashTestButton.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpPressedRouting</string>
-     </stringlist>
-    </property>
-   </widget>
-   <widget class="CDPBaseCheckBox" name="Enabled_AB">
-    <property name="geometry">
-     <rect>
-      <x>810</x>
-      <y>100</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist>
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-    <property name="text">
-     <string>Enabled</string>
-    </property>
-    <property name="font" stdset="0">
-     <font>
-      <family>Bitstream Charter</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.enabled.Value</string>
-    </property>
-   </widget>
-   <widget class="CDPBaseSlider" name="sliderA">
-    <property name="geometry">
-     <rect>
-      <x>710</x>
-      <y>0</y>
-      <width>56</width>
-      <height>601</height>
-     </rect>
-    </property>
-    <property name="toolTipDuration">
-     <number>5</number>
-    </property>
-    <property name="tickPos">
-     <enum>CDPBaseTickMarks::NoTicks</enum>
-    </property>
-    <property name="majorTicks">
-     <double>10.000000000000000</double>
-    </property>
-    <property name="minorTicks">
-     <number>10</number>
-    </property>
-    <property name="minorTickLength">
-     <number>10</number>
-    </property>
-    <property name="numPrecision" stdset="0">
-     <number>0</number>
-    </property>
-    <property name="minValue">
-     <double>-100.000000000000000</double>
-    </property>
-    <property name="valueMinNormal">
-     <double>0.000000000000000</double>
-    </property>
-    <property name="valueMinWarning">
-     <double>0.000000000000000</double>
-    </property>
-    <property name="valueMinWarningHigh">
-     <double>0.000000000000000</double>
-    </property>
-    <property name="valueMinError">
-     <double>0.000000000000000</double>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/sliders/sliderRoundKnob.svg</string>
-    </property>
-    <property name="knobText" stdset="0">
-     <bool>true</bool>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.speedCmd.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-   </widget>
    <widget class="CDPBaseMeter" name="VelocityENC">
     <property name="geometry">
      <rect>
@@ -364,271 +222,340 @@
      <number>0</number>
     </property>
     <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.scaledEncSpeed.Value</string>
+     <string>AntiBacklashApp.AntiBacklashController.ENC1Speed.Value</string>
     </property>
    </widget>
-   <widget class="CDPBaseCheckBox" name="EnableDebugMode">
+   <widget class="CDPBaseButton" name="button">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>70</y>
-      <width>121</width>
-      <height>21</height>
+      <x>440</x>
+      <y>540</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
     </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist>
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-    <property name="text">
-     <string>Debug mode</string>
-    </property>
-    <property name="font" stdset="0">
-     <font>
-      <family>Bitstream Charter</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.debugMode.Value</string>
-    </property>
-   </widget>
-   <widget class="CDPBaseLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>460</y>
-      <width>148</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.slaveTorqueBase.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-   </widget>
-   <widget class="CDPBaseLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>490</y>
-      <width>148</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.slaveTorqueGain.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-   </widget>
-   <widget class="CDPBaseLabel" name="elapsedTime">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>60</y>
-      <width>41</width>
-      <height>21</height>
-     </rect>
+    <property name="styleSheet">
+     <string notr="true">CDPBaseButton {
+    background-color: #4CAF50; /* A green color */
+    border: 5px solid #3e8e41;
+    border-radius: 40px; /* Rounded corners */
+    color: white; /* Text color */
+}
+CDPBaseButton:hover {
+    background-color: #45a049; /* A darker green */
+}
+CDPBaseButton:pressed {
+    background-color: #FFC107; /* Yellow when pressed */
+    border-color: #f5b000; 
+}</string>
     </property>
     <property name="text">
      <string>Start</string>
     </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.elapsedTime.Value</string>
+    <property name="stylingType" stdset="0">
+     <enum>CDPBaseButton::CSS</enum>
     </property>
-   </widget>
-   <widget class="CDPBaseLineEdit" name="offset">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>380</y>
-      <width>148</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.offset.Value</string>
+    <property name="cdpPressedRouting" stdset="0">
+     <string>AntiBacklashApp.SpeedCmdSim.Start.Value</string>
     </property>
     <property name="pushRoutables" stdset="0">
      <stringlist notr="true">
-      <string>cdpRouting</string>
+      <string>cdpPressedRouting</string>
      </stringlist>
     </property>
    </widget>
-   <widget class="CDPBaseLineEdit" name="offset_2">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>380</y>
-      <width>148</width>
-      <height>27</height>
+      <x>540</x>
+      <y>10</y>
+      <width>150</width>
+      <height>612</height>
      </rect>
     </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.slaveDroop.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-   </widget>
-   <widget class="CDPBaseLineEdit" name="offset_3">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>410</y>
-      <width>148</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.masterDroop.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-   </widget>
-   <widget class="CDPBaseLineEdit" name="offset_4">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>460</y>
-      <width>148</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.rampDuration.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-   </widget>
-   <widget class="CDPBaseLineEdit" name="offset_5">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>490</y>
-      <width>148</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="svgFile">
-     <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-    </property>
-    <property name="cdpRouting" stdset="0">
-     <string>AntiBacklashApp.AntiBacklashController.constSpeedDuration.Value</string>
-    </property>
-    <property name="pushRoutables" stdset="0">
-     <stringlist notr="true">
-      <string>cdpRouting</string>
-     </stringlist>
-    </property>
-   </widget>
-   <widget class="CDPBaseLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>410</y>
-      <width>41</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Offset</string>
-    </property>
-   </widget>
-   <widget class="CDPBaseLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>520</y>
-      <width>51</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Torque</string>
-    </property>
-   </widget>
-   <widget class="CDPBaseLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>440</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Droop</string>
-    </property>
-   </widget>
-   <widget class="CDPBaseLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>520</y>
-      <width>121</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ramp/constspeed</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="18" column="0">
+      <widget class="CDPBaseLineEdit" name="offset_6">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.SpeedCmdSim.MaxSpeed.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="0">
+      <widget class="CDPBaseLabel" name="label_3">
+       <property name="text">
+        <string>Master droop</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="0">
+      <widget class="CDPBaseLabel" name="label_4">
+       <property name="text">
+        <string>Const speed duration</string>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="0">
+      <widget class="CDPBaseLineEdit" name="offset_4">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.SpeedCmdSim.RampDuration.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="0">
+      <widget class="CDPBaseLabel" name="label_10">
+       <property name="text">
+        <string>Max speed</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="CDPBaseLineEdit" name="lineEdit_3">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.LoadTorqueLimit.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="CDPBaseLineEdit" name="offset_7">
+       <property name="toolTip">
+        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.AntiBacklashMode.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="CDPBaseLabel" name="label_11">
+       <property name="text">
+        <string>Antibacklash mode</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="CDPBaseLineEdit" name="lineEdit_4">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.MaxTorque.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="CDPBaseLabel" name="label_7">
+       <property name="text">
+        <string>Gain torque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0">
+      <widget class="CDPBaseLabel" name="label_6">
+       <property name="text">
+        <string>Slave droop</string>
+       </property>
+      </widget>
+     </item>
+     <item row="22" column="0">
+      <widget class="CDPBaseLineEdit" name="offset_5">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.SpeedCmdSim.ConstSpeedDuration.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="CDPBaseLabel" name="label_2">
+       <property name="text">
+        <string>Base torque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="CDPBaseLabel" name="label_9">
+       <property name="text">
+        <string>Max torque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="CDPBaseLabel" name="label">
+       <property name="text">
+        <string>Offset</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="CDPBaseLineEdit" name="lineEdit_2">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.SlaveTorqueGain.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="0">
+      <widget class="CDPBaseLabel" name="label_5">
+       <property name="text">
+        <string>Ramp duration</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="CDPBaseLineEdit" name="lineEdit">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.SlaveTorqueBase.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0">
+      <widget class="CDPBaseLineEdit" name="offset_3">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.MasterDroop.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="CDPBaseLineEdit" name="offset">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.Offset.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="CDPBaseLabel" name="label_8">
+       <property name="text">
+        <string>Load torque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0">
+      <widget class="CDPBaseLineEdit" name="offset_2">
+       <property name="text">
+        <string>Not connected</string>
+       </property>
+       <property name="svgFile">
+        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+       </property>
+       <property name="cdpRouting" stdset="0">
+        <string>AntiBacklashApp.AntiBacklashController.SlaveDroop.Value</string>
+       </property>
+       <property name="pushRoutables" stdset="0">
+        <stringlist notr="true">
+         <string>cdpRouting</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>
@@ -639,19 +566,9 @@
    <header>CDPBaseWidgets/CDPBaseLineEdit.h</header>
   </customwidget>
   <customwidget>
-   <class>CDPBaseSlider</class>
-   <extends>QWidget</extends>
-   <header>CDPBaseWidgets/CDPBaseSlider.h</header>
-  </customwidget>
-  <customwidget>
    <class>CDPBaseButton</class>
    <extends>QPushButton</extends>
    <header>CDPBaseWidgets/CDPBaseButton.h</header>
-  </customwidget>
-  <customwidget>
-   <class>CDPBaseCheckBox</class>
-   <extends>QWidget</extends>
-   <header>CDPBaseWidgets/CDPBaseCheckBox.h</header>
   </customwidget>
   <customwidget>
    <class>CDPBaseLabel</class>

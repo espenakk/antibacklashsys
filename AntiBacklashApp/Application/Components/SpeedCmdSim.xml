@@ -1,0 +1,33 @@
+<Component Model="AntiBacklashLib.SpeedCmdSim" Name="SpeedCmdSim" src="Components/SpeedCmdSim.xml" Description="Simulates user speed commands">
+  <SchedulingOrder>TopDown</SchedulingOrder>
+  <SchedulingGroup>Default</SchedulingGroup>
+  <fs>100</fs>
+  <Status>0</Status>
+
+  <Signals>
+    <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
+    <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
+    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="Start" Type="bool"></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description="A component was suspended!" Name="Component Suspended" Text="Component was suspended!"></Alarm>
+    <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
+  </Alarms>
+
+  <Parameters>
+    <Parameter Name="RampDuration" Unit="s" Value="0.10000000000000000555"></Parameter>
+    <Parameter Name="ConstSpeedDuration" Unit="s" Value="2"></Parameter>
+    <Parameter Name="MaxSpeed" Unit="rad/s" Value="1.25"></Parameter>
+  </Parameters>
+
+  <Ports>
+    <Port Input="0" Model="AntiBacklashLib.SimCmdPort" Name="SimCmd">
+
+      <Connections>
+        <Connection Input="1" LocalName=".SpeedCMD" Model="CDPPortConnection" Name="MapSpeedCMD"></Connection>
+        <Connection Input="1" LocalName=".AntiBacklashEnabled" Model="CDPPortConnection" Name="MapAntiBacklashEnabled"></Connection>
+        <Connection Input="1" LocalName=".EnableFCs" Model="CDPPortConnection" Name="MapEnableFCs"></Connection>
+      </Connections></Port>
+  </Ports>
+</Component>

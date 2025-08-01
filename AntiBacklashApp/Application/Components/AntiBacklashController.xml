@@ -7,20 +7,17 @@
   <Signals>
     <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="startAntibacklashTestButton" Type="bool"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="enabled" Type="bool"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="debugMode" Type="bool"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="antiBacklashEnabled" Type="bool"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="elapsedTime" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Speed" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Speed" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Torque" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Torque" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC3Torque" Type="double"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FCSpeedRef" Type="double" Unit="rad/s"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;double&gt;" Name="speedCmd" Type="double" Unit="rad/s"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="SpeedRef" Type="double" Unit="rad/s"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="ENC1Speed" Type="double" Unit="rad/s"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="ENC1Position" Type="double" Unit="rad/s"></Signal>
+    <Signal Input="1" Model="CDPSignal&lt;int&gt;" Name="AntiBacklashMode" Type="int"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Speed" Type="double" Unit="rad/s"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Speed" Type="double" Unit="rad/s"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Torque" Type="double" Unit="Nm"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Torque" Type="double" Unit="Nm"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC3Torque" Type="double" Unit="Nm"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="ENC1Position" Type="double" Unit="°"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="Running" Type="bool"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="TestIndex" Type="int"></Signal>
   </Signals>
 
   <Alarms>
@@ -86,21 +83,25 @@
         <Connection Input="1" LocalName=".position" Model="CDPPortConnection" Name="Mapposition" RemoteName=".TPDO1.Position"></Connection>
         <Connection Input="1" LocalName=".speed" Model="CDPPortConnection" Name="Mapspeed" RemoteName=".TPDO3.Speed"></Connection>
       </Connections></Port>
+    <Port Input="1" Model="AntiBacklashLib.SimCmdPort" Name="SimCmd" Routing="..SpeedCmdSim.SimCmd">
+
+      <Connections>
+        <Connection Input="1" LocalName=".SpeedCMD" Model="CDPPortConnection" Name="MapSpeedCMD"></Connection>
+        <Connection Input="1" LocalName=".AntiBacklashEnabled" Model="CDPPortConnection" Name="MapAntiBacklashEnabled"></Connection>
+        <Connection Input="1" LocalName=".EnableFCs" Model="CDPPortConnection" Name="MapEnableFCs"></Connection>
+      </Connections></Port>
   </Ports>
 
   <Parameters>
-    <Parameter Name="loadTorqueLimit" Unit="Nm" Value="2"></Parameter>
-    <Parameter Name="maxTorque" Unit="Nm" Value="10"></Parameter>
-    <Parameter Name="maxSpeed" Unit="rad/s"></Parameter>
-    <Parameter Name="minSpeed" Unit="rad/s"></Parameter>
-    <Parameter Name="slowdownRange" Unit="Degrees" Value="60"></Parameter>
-    <Parameter Name="degMargin" Unit="Degrees" Value="20"></Parameter>
-    <Parameter Name="slaveTorqueBase" Unit="Nm" Value="3"></Parameter>
-    <Parameter Name="slaveTorqueGain" Value="0"></Parameter>
-    <Parameter Name="rampDuration" Unit="s" TimeLastChanged="" Value="0.10000000000000000555"></Parameter>
-    <Parameter Name="constSpeedDuration" TimeLastChanged="" Value="2"></Parameter>
-    <Parameter Name="offset" Unit="%" Value="0"></Parameter>
-    <Parameter Name="slaveDroop" Unit="%" Value="0"></Parameter>
-    <Parameter Name="masterDroop" Unit="%" Value="0"></Parameter>
+    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="2"></Parameter>
+    <Parameter Name="MaxTorque" Unit="Nm" Value="10"></Parameter>
+    <Parameter Name="SlaveTorqueBase" Unit="Nm"></Parameter>
+    <Parameter Name="SlaveTorqueGain" Value="1"></Parameter>
+    <Parameter Name="Offset" Unit="%" Value="1"></Parameter>
+    <Parameter Name="SlaveDroop" Unit="%" Value="1"></Parameter>
+    <Parameter Name="MasterDroop" Unit="%"></Parameter>
   </Parameters>
+
+  <Subcomponents></Subcomponents>
+  
 </Component>
