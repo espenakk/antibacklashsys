@@ -14,6 +14,7 @@
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
     <Signal Description="The number of samples the logger skipped when the application was overloaded during the last 60 seconds." Input="0" Model="CDPSignal&lt;int&gt;" Name="SamplesDroppedLastMinute" Type="int" Unit="samples per minute">
       <Operator Deadband="0" DelayOff="0" DelayOn="0" Description="Triggers an alarm when the logger drops samples." Group="" InputMask="18446744073709551615" LastSetTime="" Level="Warning" Limit="1" LimitType="Above" Model="Automation.AlarmOperator&lt;int&gt;" Name="Alarm" RepeatCountLimit="0" RepeatDecrementTime="0" Text="Logger overloaded, dropping samples! Consider reducing the PeriodicLogFrequency." Type="int"></Operator></Signal>
+    <Signal Description="The number of samples (changed values and events) received by the logger and forwarded to the selected Datastore during the last 60 seconds." Input="0" Model="CDPSignal&lt;int&gt;" Name="SamplesLoggedLastMinute" Type="int" Unit="samples per minute"></Signal>
   </Signals>
 
   <Alarms>
@@ -21,6 +22,7 @@
     <Alarm Description="Alarm is triggered (with Text containing the list of errors) when some node of the component (like operator) has configuration fault." Level="Error" Name="ConfigurationFaults"></Alarm>
     <Alarm Description="The database has reached the maximum size." Name="SizeAlarm"></Alarm>
     <Alarm Description="Error when logging to database." Name="LoggerAlarm"></Alarm>
+    <Alarm Description="Set when LoggedValues with StaleDataDetection do not change during configured interval." Level="Error" Name="StaleDataAlarm"></Alarm>
   </Alarms>
 
   <LoggedValues>
@@ -28,10 +30,13 @@
     <LoggedValue Delta="0" Description="Description of logged element." Name="ENC1Speed" Routing="AntiBacklashApp.AntiBacklashController.ENC1Speed"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="FC1Speed" Routing="AntiBacklashApp.AntiBacklashController.FC1Speed"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="FC2Speed" Routing="AntiBacklashApp.AntiBacklashController.FC2Speed"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="ENC1Position" Routing="AntiBacklashApp.AntiBacklashController.ENC1Position"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC1Position" Routing="AntiBacklashApp.AntiBacklashController.FC1Position"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC2Position" Routing="AntiBacklashApp.AntiBacklashController.FC2Position"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="FC3Position" Routing="AntiBacklashApp.AntiBacklashController.FC3Position"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="FC1Torque" Routing="AntiBacklashApp.AntiBacklashController.FC1Torque"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="FC2Torque" Routing="AntiBacklashApp.AntiBacklashController.FC2Torque"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="FC3Torque" Routing="AntiBacklashApp.AntiBacklashController.FC3Torque"></LoggedValue>
-    <LoggedValue Delta="0" Description="Description of logged element." Name="ENC1Position" Routing="AntiBacklashApp.AntiBacklashController.ENC1Position"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="AntiBacklashEnabled" Routing="AntiBacklashApp.AntiBacklashController.SimCmd.AntiBacklashEnabled"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="Offset" Routing="AntiBacklashApp.AntiBacklashController.Offset"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="BaseTorque" Routing="AntiBacklashApp.AntiBacklashController.SlaveTorqueBase"></LoggedValue>

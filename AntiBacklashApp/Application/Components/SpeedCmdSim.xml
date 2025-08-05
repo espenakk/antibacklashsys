@@ -17,7 +17,7 @@
 
   <Parameters>
     <Parameter Name="RampDuration" Unit="s" Value="0.10000000000000000555"></Parameter>
-    <Parameter Name="ConstSpeedDuration" Unit="s" Value="2"></Parameter>
+    <Parameter Name="ConstSpeedDuration" Unit="s" Value="5"></Parameter>
     <Parameter Name="MaxSpeed" Unit="rad/s" Value="1.25"></Parameter>
   </Parameters>
 

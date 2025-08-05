@@ -18,6 +18,9 @@
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="ENC1Position" Type="double" Unit="°"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="Running" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="TestIndex" Type="int"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Position" Type="double" Unit="°"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Position" Type="double" Unit="°"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC3Position" Type="double" Unit="°"></Signal>
   </Signals>
 
   <Alarms>
@@ -90,15 +93,33 @@
         <Connection Input="1" LocalName=".AntiBacklashEnabled" Model="CDPPortConnection" Name="MapAntiBacklashEnabled"></Connection>
         <Connection Input="1" LocalName=".EnableFCs" Model="CDPPortConnection" Name="MapEnableFCs"></Connection>
       </Connections></Port>
+    <Port Input="1" Model="AntiBacklashLib.ShaftPort" Name="S1" Routing="AntiBacklashApp.CANOpenPCIIOServer.FC1">
+
+      <Connections>
+        <Connection Input="1" LocalName=".ShaftAngle" Model="CDPPortConnection" Name="MapShaftAngle"></Connection>
+        <Connection Input="1" LocalName=".ShaftRounds" Model="CDPPortConnection" Name="MapShaftRounds"></Connection>
+      </Connections></Port>
+    <Port Input="1" Model="AntiBacklashLib.ShaftPort" Name="S2" Routing="AntiBacklashApp.CANOpenPCIIOServer.FC2">
+
+      <Connections>
+        <Connection Input="1" LocalName=".ShaftAngle" Model="CDPPortConnection" Name="MapShaftAngle"></Connection>
+        <Connection Input="1" LocalName=".ShaftRounds" Model="CDPPortConnection" Name="MapShaftRounds"></Connection>
+      </Connections></Port>
+    <Port Input="1" Model="AntiBacklashLib.ShaftPort" Name="S3" Routing="AntiBacklashApp.CANOpenPCIIOServer.FC3">
+
+      <Connections>
+        <Connection Input="1" LocalName=".ShaftAngle" Model="CDPPortConnection" Name="MapShaftAngle"></Connection>
+        <Connection Input="1" LocalName=".ShaftRounds" Model="CDPPortConnection" Name="MapShaftRounds"></Connection>
+      </Connections></Port>
   </Ports>
 
   <Parameters>
-    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="2"></Parameter>
-    <Parameter Name="MaxTorque" Unit="Nm" Value="10"></Parameter>
-    <Parameter Name="SlaveTorqueBase" Unit="Nm"></Parameter>
-    <Parameter Name="SlaveTorqueGain" Value="1"></Parameter>
+    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="5"></Parameter>
+    <Parameter Name="MaxTorque" Unit="Nm" Value="4"></Parameter>
+    <Parameter Name="SlaveTorqueBase" Unit="Nm" PreviousValue="3" Value="3"></Parameter>
+    <Parameter Name="SlaveTorqueGain" Value="0"></Parameter>
     <Parameter Name="Offset" Unit="%" Value="1"></Parameter>
-    <Parameter Name="SlaveDroop" Unit="%" Value="1"></Parameter>
+    <Parameter Name="SlaveDroop" Unit="%" Value="0"></Parameter>
     <Parameter Name="MasterDroop" Unit="%"></Parameter>
   </Parameters>
 

@@ -264,7 +264,7 @@ CDPBaseButton:pressed {
      </stringlist>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -352,7 +352,7 @@ CDPBaseButton:pressed {
      <item row="1" column="0">
       <widget class="CDPBaseLineEdit" name="offset_7">
        <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset</string>
+        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
        </property>
        <property name="toolTipDuration">
         <number>-1</number>

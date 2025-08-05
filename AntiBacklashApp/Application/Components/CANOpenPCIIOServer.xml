@@ -71,7 +71,7 @@
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="10" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="1" Type="double"></ScalingPoint></Operator></CDPChannel>
           <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DINStatusWord" Type="unsigned short" Description="DINStatusWord containing info about: Emergency-control, Brake Open feedback (ID 56)"></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="LastActiveFault" Type="short" Description="Last Active Fault (ID 37)"></CDPChannel></TPDO>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="ShaftAngle" Type="short" Description="Shaft angle (ID 1169)"></CDPChannel></TPDO>
         <RPDO AdjustWithNodeAddress="1" Input="0" Model="CANOpenMaster.RPDO" Name="RPDO21" Nr="21" COBID="1024">
           <CDPChannel Input="1" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="FBControlWord" Type="unsigned short" Description="Control word"></CDPChannel>
           <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="SpeedRef" Type="short" Description="Speed reference" Unit="%">
@@ -102,7 +102,7 @@
           <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="processdata_in6" Type="short" Description="Currently not in use"></CDPChannel></RPDO>
 
         <ObjectDictionary>
-          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6165" Model="CANOpenIOServer.CustomODEntry" Name="TPDO22 Transmission type" Subindex="2" Value="5" Description="Send TPDO22 at every 5th SYNC"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6165" Model="CANOpenIOServer.CustomODEntry" Name="TPDO22 Transmission type" Subindex="2" Value="1" Description="Send TPDO22 at every 5th SYNC"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6164" Model="CANOpenIOServer.CustomODEntry" Name="TPDO21 Transmission type" Subindex="2" Value="1" Unit="period" Description="Send TPDO21 at every SYNC"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="4109" Model="CANOpenIOServer.CustomODEntry" Name="Life Time" Subindex="0" Value="3" Description="Life time used by node"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="4108" Model="CANOpenIOServer.CustomHexODEntry" Name="Guard Time" Subindex="0" Value="100" Unit="ms" Description="Guard time used by node"></Entry>
@@ -126,7 +126,7 @@
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="10" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="1" Type="double"></ScalingPoint></Operator></CDPChannel>
           <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DINStatusWord" Type="unsigned short" Value="0" Description="DINStatusWord containing info about: Emergency-control, Brake Open feedback (ID 56)"></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="LastActiveFault" Type="short" Value="0" Description="Last Active Fault (ID 37)"></CDPChannel></TPDO>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="ShaftAngle" Type="short" Value="0" Description="ShaftAngle (ID 1169)"></CDPChannel></TPDO>
         <RPDO AdjustWithNodeAddress="1" Input="0" Model="CANOpenMaster.RPDO" Name="RPDO21" Nr="21" COBID="1024">
           <CDPChannel Input="1" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="FBControlWord" Type="unsigned short" Value="0" Description="Control word"></CDPChannel>
           <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="SpeedRef" Type="short" Value="0" Description="Speed reference" Unit="%">
@@ -158,7 +158,7 @@
 
         <ObjectDictionary>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6164" Model="CANOpenIOServer.CustomODEntry" Name="TPDO21 Transmission type" Subindex="2" Value="1" Unit="period" Description="Send TPDO21 at every SYNC"></Entry>
-          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6165" Model="CANOpenIOServer.CustomODEntry" Name="TPDO22 Transmission type" Subindex="2" Value="5" Description="Send TPDO22 at every 5th SYNC"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6165" Model="CANOpenIOServer.CustomODEntry" Name="TPDO22 Transmission type" Subindex="2" Value="1" Description="Send TPDO22 at every 5th SYNC"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="4108" Model="CANOpenIOServer.CustomODEntry" Name="Guard Time" Subindex="0" Value="100" Unit="ms" Description="Guard time used by node"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="4109" Model="CANOpenIOServer.CustomODEntry" Name="Life Time" Subindex="0" Value="3" Description="Life time used by node"></Entry>
         </ObjectDictionary></Node>
@@ -180,7 +180,7 @@
               <ScalingPoint InValue="0" Model="Automation.ScalingPoint&lt;double&gt;" Name="P0" OutValue="0" Type="double"></ScalingPoint>
               <ScalingPoint InValue="10" Model="Automation.ScalingPoint&lt;double&gt;" Name="P1" OutValue="1" Type="double"></ScalingPoint></Operator></CDPChannel>
           <CDPChannel Input="0" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="DINStatusWord" Type="unsigned short" Value="0" Description="DINStatusWord containing info about: Emergency-control, Brake Open feedback (ID 56)"></CDPChannel>
-          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="LastActiveFault" Type="short" Value="0" Description="Last Active Fault (ID 37)"></CDPChannel></TPDO>
+          <CDPChannel Input="0" Model="CDPSignalChannel&lt;short&gt;" Name="ShaftAngle" Type="short" Value="0" Description="ShaftAngle (ID 1169)"></CDPChannel></TPDO>
         <RPDO AdjustWithNodeAddress="1" Input="0" Model="CANOpenMaster.RPDO" Name="RPDO21" Nr="21" COBID="1024">
           <CDPChannel Input="1" Model="CDPSignalChannel&lt;unsigned short&gt;" Name="FBControlWord" Type="unsigned short" Value="0" Description="Control word"></CDPChannel>
           <CDPChannel Input="1" Model="CDPSignalChannel&lt;short&gt;" Name="SpeedRef" Type="short" Value="0" Description="Speed reference" Unit="%">
@@ -212,7 +212,7 @@
 
         <ObjectDictionary>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6164" Model="CANOpenIOServer.CustomODEntry" Name="TPDO21 Transmission type" Subindex="2" Value="1" Unit="period" Description="Send TPDO21 at every SYNC"></Entry>
-          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6165" Model="CANOpenIOServer.CustomODEntry" Name="TPDO22 Transmission type" Subindex="2" Value="5" Description="Send TPDO22 at every 5th SYNC"></Entry>
+          <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="6165" Model="CANOpenIOServer.CustomODEntry" Name="TPDO22 Transmission type" Subindex="2" Value="1" Description="Send TPDO22 at every 5th SYNC"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned short" Index="4108" Model="CANOpenIOServer.CustomODEntry" Name="Guard Time" Subindex="0" Value="100" Unit="ms" Description="Guard time used by node"></Entry>
           <Entry AdjustWithNodeAddress="0" CurrentValue="0" DataType="unsigned char" Index="4109" Model="CANOpenIOServer.CustomODEntry" Name="Life Time" Subindex="0" Value="3" Description="Life time used by node"></Entry>
         </ObjectDictionary></Node>

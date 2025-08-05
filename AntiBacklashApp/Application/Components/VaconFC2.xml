@@ -1,6 +1,6 @@
-<Component Model="VaconLib.VaconMarineAppFC" Name="VaconMarineAppFCC62" src="Components/VaconMarineAppFCC62.xml" Description="Interfaces a Vacon FC with Marine Application, using OPT-C6 CANopen option board.">
+<Component Model="VaconLib.VaconMarineAppFC" Name="VaconFC2" src="Components/VaconFC2.xml" Description="Interfaces a Vacon FC with Marine Application, using OPT-C6 CANopen option board.">
   <LoopbackMode>0</LoopbackMode>
-  <NodeName>FC3</NodeName>
+  <NodeName>FC2</NodeName>
   <OptionBoard>OPT-C6</OptionBoard>
   <SchedulingOrder>TopDown</SchedulingOrder>
   <SchedulingGroup>Default</SchedulingGroup>
@@ -43,7 +43,7 @@
     <VaconParameter DataType="short" Description="Fieldbus data out 3 selection (TPDO22 byte 1-2). ID 7    = DC Link voltage   (default ID 45 Motor Current to FB)." ID="854" Index="P2.13.5" Model="VaconLib.VaconParameter" Name="FB Data Out 3 Sel" Scaling="1" Value="7"></VaconParameter>
     <VaconParameter DataType="short" Description="Fieldbus data out 4 selection (TPDO22 byte 3-4). ID 4    = Motor Torque      (default ID  4 Motor Torque)." ID="855" Index="P2.13.6" Model="VaconLib.VaconParameter" Name="FB Data Out 4 Sel" Scaling="1" Value="4"></VaconParameter>
     <VaconParameter DataType="short" Description="Fieldbus data out 5 selection (TPDO22 byte 5-6). ID 56   = Din Status Word   (default ID  5 Motor Power)." ID="856" Index="P2.13.7" Model="VaconLib.VaconParameter" Name="FB Data Out 5 Sel" Scaling="1" Value="56"></VaconParameter>
-    <VaconParameter DataType="short" Description="Fieldbus data out 6 selection (TPDO22 byte 7-8). ID 37   = Last Active Fault (default ID  6 Motor Voltage)." ID="857" Index="P2.13.8" Model="VaconLib.VaconParameter" Name="FB Data Out 6 Sel" Scaling="1" Value="37"></VaconParameter>
+    <VaconParameter DataType="short" Description="Fieldbus data out 6 selection (TPDO22 byte 7-8). ID 1169 = Shaft Angle (default ID  6 Motor Voltage)." ID="857" Index="P2.13.8" Model="VaconLib.VaconParameter" Name="FB Data Out 6 Sel" Scaling="1" Value="1169"></VaconParameter>
     <VaconParameter DataType="short" Description="Fieldbus data in 1 selection (RPDO21 byte 5-6). ID 1140 = FB Torque Reference       (default ID 1140 FB Torque Reference)." ID="876" Index="P2.13.19" Model="VaconLib.VaconParameter" Name="FB Data In 1 Sel" Scaling="1" Value="1140"></VaconParameter>
     <VaconParameter DataType="short" Description="Fieldbus data in 2 selection (RPDO21 byte 7-8). ID 1287 = Torque Limit Motoring     (default ID   46 FB Limit Scaling)." ID="877" Index="P2.13.20" Model="VaconLib.VaconParameter" Name="FB Data In 2 Sel" Scaling="1" Value="1287"></VaconParameter>
     <VaconParameter DataType="short" Description="Fieldbus data in 3 selection (RPDO22 byte 1-2). ID 1288 = Torque Limit Generatoring (default ID   47 FB Adjust Reference)." ID="878" Index="P2.13.21" Model="VaconLib.VaconParameter" Name="FB Data In 3 Sel" Scaling="1" Value="1288"></VaconParameter>
@@ -65,7 +65,7 @@
   </VaconParameters>
 
   <Ports>
-    <Port Input="1" Model="VaconLib.VaconMarineAppFCPort" Name="Drive" Routing="AntiBacklashApp.AntiBacklashController.FC3">
+    <Port Input="1" Model="VaconLib.VaconMarineAppFCPort" Name="Drive" Routing="AntiBacklashApp.AntiBacklashController.FC2" ModeSelect="0">
 
       <Connections>
         <Connection Input="1" LocalName=".Enable" Model="CDPPortConnection" Name="MapEnable"></Connection>
@@ -82,12 +82,12 @@
         <Connection Input="0" LocalName=".SpeedActual" Model="CDPPortConnection" Name="MapSpeedActual"></Connection>
         <Connection Input="0" LocalName=".TorqueActual" Model="CDPPortConnection" Name="MapTorqueActual"></Connection>
       </Connections></Port>
-    <Port Input="1" Model="VaconLib.FCIOPort" Name="FCIOPort" Routing="AntiBacklashApp.CANOpenPCIIOServer.FC3" RoutingType="Push">
+    <Port Input="1" Model="VaconLib.FCIOPort" Name="FCIOPort" Routing="AntiBacklashApp.CANOpenPCIIOServer.FC2">
 
       <Connections>
         <Connection Input="1" LocalName=".OnlineState" Model="CDPPortConnection" Name="MapOnlineState" RemoteName=".NodeState"></Connection>
         <Connection Input="1" LocalName=".FBStatusWord" Model="CDPPortConnection" Name="MapFBStatusWord" RemoteName=".TPDO21.FBStatusWord"></Connection>
-        <Connection Input="1" LocalName=".LastActiveFault" Model="CDPPortConnection" Name="MapLastActiveFault" RemoteName=".TPDO22.LastActiveFault"></Connection>
+        <Connection Input="1" LocalName="" Model="CDPPortConnection" Name="MapLastActiveFault" RemoteName=""></Connection>
         <Connection Input="1" LocalName=".FBActualSpeed" Model="CDPPortConnection" Name="MapFBActualSpeed" RemoteName=".TPDO21.ActualSpeed"></Connection>
         <Connection Input="1" LocalName=".FBMotorTorque" Model="CDPPortConnection" Name="MapFBMotorTorque" RemoteName=".TPDO22.MotorTorque"></Connection>
         <Connection Input="1" LocalName=".DINStatusWord" Model="CDPPortConnection" Name="MapDINStatusWord" RemoteName=".TPDO22.DINStatusWord"></Connection>
@@ -103,14 +103,14 @@
   </Ports>
 
   <Parameters>
-    <Parameter Description="Invert direction of speed and torque" Max="1" Min="0" Name="InvertDirection" Unit="0/1" Routing="" Value="0"></Parameter>
-    <Parameter Description="Motor nominal speed (from motor rating plate)" Max="3000" Min="360" Name="MotorNomSpeed" Unit="rpm" Value="1440"></Parameter>
+    <Parameter Description="Invert direction of speed and torque" Max="1" Min="0" Name="InvertDirection" Unit="0/1" Routing="" Value="1"></Parameter>
+    <Parameter Description="Motor nominal speed (from motor rating plate)" Max="3000" Min="360" Name="MotorNomSpeed" Unit="rpm" Value="1400"></Parameter>
     <Parameter Description="Motor nominal frequency (from motor rating plate)" Max="60" Min="50" Name="MotorNomFreq" Unit="Hz" Value="50"></Parameter>
-    <Parameter Description="Motor nominal current (from motor rating plate)" Name="MotorNomCurrent" Unit="A" Value="14.300000000000000711"></Parameter>
-    <Parameter Description="Nominal motor power (from motor rating plate)" Name="MotorNomPower" Unit="kW" Value="4"></Parameter>
-    <Parameter Description="Motor nominal cosinus phi (from motor rating plate)" Max="1" Min="0.5" Name="MotorNomCosPhi" Value="0.81000000000000005329"></Parameter>
+    <Parameter Description="Motor nominal current (from motor rating plate)" Name="MotorNomCurrent" Unit="A" Value="2.6200000000000001066"></Parameter>
+    <Parameter Description="Nominal motor power (from motor rating plate)" Name="MotorNomPower" Unit="kW" Value="0.55000000000000004441"></Parameter>
+    <Parameter Description="Motor nominal cosinus phi (from motor rating plate)" Max="1" Min="0.5" Name="MotorNomCosPhi" Value="0.73999999999999999112"></Parameter>
     <Parameter Description="Motor nominal voltage (from motor rating plate)" Max="690" Min="230" Name="MotorNomVoltage" Unit="V" Value="230"></Parameter>
-    <Parameter Description="Nominal torque of motor (from motor data sheet)" Max="99999" Min="1" Name="MotorNomTorque" Unit="Nm" Value="26.530000000000001137"></Parameter>
+    <Parameter Description="Nominal torque of motor (from motor data sheet)" Max="99999" Min="1" Name="MotorNomTorque" Unit="Nm" Value="3.75"></Parameter>
     <Parameter Description="Set EnableDebugOverride parameter to 471 to write cw_bXX bits to the control word, and also set FBSpeedRef=SpeedRef ." Max="500" Min="0" Name="EnableDebugOverride"></Parameter>
     <Parameter Description="Motor efficiency (from data sheet)" Max="1" Min="0.5" Name="MotorEfficiency" Value="0.95999999999999996447"></Parameter>
     <Parameter Description="Used to scale SpeedRef to %, so this signal must have same unit as SpeedRef" Max="1000" Min="1" Name="MotorMaxSpeed" Unit="rad/s" Value="146"></Parameter>
