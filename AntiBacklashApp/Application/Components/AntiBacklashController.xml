@@ -9,7 +9,7 @@
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="SpeedRef" Type="double" Unit="rad/s"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="ENC1Speed" Type="double" Unit="rad/s"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;int&gt;" Name="AntiBacklashMode" Type="int"></Signal>
+    <Signal Input="1" Model="CDPSignal&lt;int&gt;" Name="AntiBacklashMode" Type="int" Routing="..FullTest.AntiBacklashMode"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Speed" Type="double" Unit="rad/s"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC2Speed" Type="double" Unit="rad/s"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="FC1Torque" Type="double" Unit="Nm"></Signal>
@@ -114,13 +114,13 @@
   </Ports>
 
   <Parameters>
-    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="5"></Parameter>
-    <Parameter Name="MaxTorque" Unit="Nm" Value="4"></Parameter>
-    <Parameter Name="SlaveTorqueBase" Unit="Nm" PreviousValue="3" Value="3"></Parameter>
-    <Parameter Name="SlaveTorqueGain" Value="0"></Parameter>
-    <Parameter Name="Offset" Unit="%" Value="1"></Parameter>
-    <Parameter Name="SlaveDroop" Unit="%" Value="0"></Parameter>
-    <Parameter Name="MasterDroop" Unit="%"></Parameter>
+    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="4" Routing="..FullTest.LoadTorqueLimit"></Parameter>
+    <Parameter Name="MaxTorque" Unit="Nm" Value="5" Routing="..FullTest.MaxTorque"></Parameter>
+    <Parameter Name="SlaveTorqueBase" Unit="Nm" PreviousValue="3" Value="3" Routing="..FullTest.SlaveTorqueBase"></Parameter>
+    <Parameter Name="SlaveTorqueGain" Value="5" Routing="..FullTest.SlaveTorqueGain"></Parameter>
+    <Parameter Name="Offset" Unit="%" Value="1" Routing="..FullTest.Offset"></Parameter>
+    <Parameter Name="SlaveDroop" Unit="%" Value="0" Routing="..FullTest.SlaveDroop"></Parameter>
+    <Parameter Name="MasterDroop" Unit="%" Routing="..FullTest.MasterDroop"></Parameter>
   </Parameters>
 
   <Subcomponents></Subcomponents>

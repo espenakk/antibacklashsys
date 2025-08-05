@@ -87,7 +87,7 @@
       <Connections>
         <Connection Input="1" LocalName=".OnlineState" Model="CDPPortConnection" Name="MapOnlineState" RemoteName=".NodeState"></Connection>
         <Connection Input="1" LocalName=".FBStatusWord" Model="CDPPortConnection" Name="MapFBStatusWord" RemoteName=".TPDO21.FBStatusWord"></Connection>
-        <Connection Input="1" LocalName="" Model="CDPPortConnection" Name="MapLastActiveFault" RemoteName=""></Connection>
+        <Connection Input="1" LocalName=".LastActiveFault" Model="CDPPortConnection" Name="MapLastActiveFault" RemoteName=".TPDO22.LastActiveFault"></Connection>
         <Connection Input="1" LocalName=".FBActualSpeed" Model="CDPPortConnection" Name="MapFBActualSpeed" RemoteName=".TPDO21.ActualSpeed"></Connection>
         <Connection Input="1" LocalName=".FBMotorTorque" Model="CDPPortConnection" Name="MapFBMotorTorque" RemoteName=".TPDO22.MotorTorque"></Connection>
         <Connection Input="1" LocalName=".DINStatusWord" Model="CDPPortConnection" Name="MapDINStatusWord" RemoteName=".TPDO22.DINStatusWord"></Connection>

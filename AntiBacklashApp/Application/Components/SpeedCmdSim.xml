@@ -7,7 +7,7 @@
   <Signals>
     <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
-    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="Start" Type="bool"></Signal>
+    <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="Start" Type="bool" Routing="..FullTest.Start"></Signal>
   </Signals>
 
   <Alarms>
@@ -18,7 +18,7 @@
   <Parameters>
     <Parameter Name="RampDuration" Unit="s" Value="0.10000000000000000555"></Parameter>
     <Parameter Name="ConstSpeedDuration" Unit="s" Value="5"></Parameter>
-    <Parameter Name="MaxSpeed" Unit="rad/s" Value="1.25"></Parameter>
+    <Parameter Name="MaxSpeed" Unit="rad/s" Value="1.25" Routing="..FullTest.MaxSpeed"></Parameter>
   </Parameters>
 
   <Ports>
