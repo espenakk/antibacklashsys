@@ -1,24 +1,18 @@
 <Component Model="AntiBacklashLib.FullTest" Name="FullTest" src="Components/FullTest.xml" Description="Automatic full test with different parameters">
   <SchedulingOrder>TopDown</SchedulingOrder>
   <SchedulingGroup>Default</SchedulingGroup>
-  <fs>100</fs>
+  <fs>5</fs>
   <Status>0</Status>
 
   <Signals>
     <Signal Description="Process run time each s." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Timer" Type="double" Unit="s/s"></Signal>
     <Signal Description="Process interval [s]." Input="0" Model="CDPSignal&lt;double&gt;" Name="Process Period" Type="double" Unit="s"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="AntiBacklashMode" Type="int"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="LoadTorqueLimit" Type="double" Unit="Nm" Value="4"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="MaxTorque" Type="double" Unit="Nm" Value="5"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="SlaveTorqueBase" Type="double" Unit="Nm" Value="3"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="SlaveTorqueGain" Type="double" Unit="Nm" Value="5"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="Offset" Type="double" Unit="%" Value="1"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="SlaveDroop" Type="double" Unit="%"></Signal>
-    <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="MasterDroop" Type="double" Unit="%"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;bool&gt;" Name="Start" Type="bool"></Signal>
     <Signal Input="0" Model="CDPSignal&lt;double&gt;" Name="MaxSpeed" Type="double" Unit="rad/s" Value="1.25"></Signal>
     <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="Enable" Type="bool"></Signal>
     <Signal Input="1" Model="CDPSignal&lt;bool&gt;" Name="IsRunning" Type="bool" Routing="..AntiBacklashController.Running"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="CurrentStatus" Type="int"></Signal>
+    <Signal Input="0" Model="CDPSignal&lt;int&gt;" Name="TotalTests" Type="int"></Signal>
   </Signals>
 
   <Alarms>
@@ -27,6 +21,39 @@
   </Alarms>
 
   <Parameters>
-    <Parameter Name="NumTests" Value="4"></Parameter>
+    <Parameter Name="NumTests" Value="9"></Parameter>
+    <Parameter Name="GainMin" Value="1"></Parameter>
+    <Parameter Name="GainMax" Value="9"></Parameter>
+    <Parameter Name="BaseMin" Value="0.5"></Parameter>
+    <Parameter Name="BaseMax" Value="4.5"></Parameter>
+    <Parameter Name="OffsetMin" Value="0.25"></Parameter>
+    <Parameter Name="OffsetMax" Value="2.25"></Parameter>
+    <Parameter Name="DroopMin" Value="0.25"></Parameter>
+    <Parameter Name="DroopMax" Value="2.25"></Parameter>
+    <Parameter Name="AntiBacklashMode"></Parameter>
+    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="4"></Parameter>
+    <Parameter Name="MaxTorque" Unit="Nm" Value="5"></Parameter>
+    <Parameter Name="SlaveTorqueBase" Unit="Nm" Value="3"></Parameter>
+    <Parameter Name="SlaveTorqueGain" Unit="Nm" Value="6"></Parameter>
+    <Parameter Name="Offset" Unit="%" Value="1"></Parameter>
+    <Parameter Name="SlaveDroop" Unit="%"></Parameter>
+    <Parameter Name="MasterDroop" Unit="%"></Parameter>
+    <Parameter Name="m_Start"></Parameter>
+    <Parameter Name="m_MaxSpeed" Unit="rad/s" Value="1.25"></Parameter>
   </Parameters>
+
+  <Ports>
+    <Port Input="0" Model="AntiBacklashLib.ABParamPort" Name="ABParams">
+
+      <Connections>
+        <Connection Input="0" LocalName=".AntiBacklashMode" Model="CDPPortConnection" Name="MapAntiBacklashMode"></Connection>
+        <Connection Input="0" LocalName=".LoadTorqueLimit" Model="CDPPortConnection" Name="MapLoadTorqueLimit"></Connection>
+        <Connection Input="0" LocalName=".MaxTorque" Model="CDPPortConnection" Name="MapMaxTorque"></Connection>
+        <Connection Input="0" LocalName=".SlaveTorqueBase" Model="CDPPortConnection" Name="MapSlaveTorqueBase"></Connection>
+        <Connection Input="0" LocalName=".SlaveTorqueGain" Model="CDPPortConnection" Name="MapSlaveTorqueGain"></Connection>
+        <Connection Input="0" LocalName=".Offset" Model="CDPPortConnection" Name="MapOffset"></Connection>
+        <Connection Input="0" LocalName=".SlaveDroop" Model="CDPPortConnection" Name="MapSlaveDroop"></Connection>
+        <Connection Input="0" LocalName=".MasterDroop" Model="CDPPortConnection" Name="MapMasterDroop"></Connection>
+      </Connections></Port>
+  </Ports>
 </Component>

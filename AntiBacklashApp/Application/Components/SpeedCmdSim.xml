@@ -1,4 +1,5 @@
 <Component Model="AntiBacklashLib.SpeedCmdSim" Name="SpeedCmdSim" src="Components/SpeedCmdSim.xml" Description="Simulates user speed commands">
+  <Priority>high</Priority>
   <SchedulingOrder>TopDown</SchedulingOrder>
   <SchedulingGroup>Default</SchedulingGroup>
   <fs>100</fs>
