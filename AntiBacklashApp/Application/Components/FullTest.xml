@@ -22,14 +22,6 @@
 
   <Parameters>
     <Parameter Name="NumTests" Value="9"></Parameter>
-    <Parameter Name="GainMin" Value="1"></Parameter>
-    <Parameter Name="GainMax" Value="9"></Parameter>
-    <Parameter Name="BaseMin" Value="0.5"></Parameter>
-    <Parameter Name="BaseMax" Value="4.5"></Parameter>
-    <Parameter Name="OffsetMin" Value="0.25"></Parameter>
-    <Parameter Name="OffsetMax" Value="2.25"></Parameter>
-    <Parameter Name="DroopMin" Value="0.25"></Parameter>
-    <Parameter Name="DroopMax" Value="2.25"></Parameter>
     <Parameter Name="AntiBacklashMode"></Parameter>
     <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="4"></Parameter>
     <Parameter Name="MaxTorque" Unit="Nm" Value="5"></Parameter>
@@ -54,6 +46,9 @@
         <Connection Input="0" LocalName=".Offset" Model="CDPPortConnection" Name="MapOffset"></Connection>
         <Connection Input="0" LocalName=".SlaveDroop" Model="CDPPortConnection" Name="MapSlaveDroop"></Connection>
         <Connection Input="0" LocalName=".MasterDroop" Model="CDPPortConnection" Name="MapMasterDroop"></Connection>
+        <Connection Input="1" LocalName=".SlaveDelay" Model="CDPPortConnection" Name="MapSlaveDelay"></Connection>
+        <Connection Input="1" LocalName=".DegreeOffset" Model="CDPPortConnection" Name="MapDegreeOffset"></Connection>
+        <Connection Input="1" LocalName=".DegreeGain" Model="CDPPortConnection" Name="MapDegreeGain"></Connection>
       </Connections></Port>
   </Ports>
 </Component>

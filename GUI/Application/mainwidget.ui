@@ -255,7 +255,7 @@ CDPBaseButton:pressed {
      <item row="18" column="0">
       <widget class="CDPBaseLineEdit" name="offset_6">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -287,7 +287,7 @@ CDPBaseButton:pressed {
      <item row="20" column="0">
       <widget class="CDPBaseLineEdit" name="offset_4">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -312,7 +312,7 @@ CDPBaseButton:pressed {
      <item row="9" column="0">
       <widget class="CDPBaseLineEdit" name="lineEdit_3">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -336,7 +336,7 @@ CDPBaseButton:pressed {
         <number>-1</number>
        </property>
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -361,7 +361,7 @@ CDPBaseButton:pressed {
      <item row="11" column="0">
       <widget class="CDPBaseLineEdit" name="lineEdit_4">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -393,7 +393,7 @@ CDPBaseButton:pressed {
      <item row="22" column="0">
       <widget class="CDPBaseLineEdit" name="offset_5">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -432,7 +432,7 @@ CDPBaseButton:pressed {
      <item row="7" column="0">
       <widget class="CDPBaseLineEdit" name="lineEdit_2">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -457,7 +457,7 @@ CDPBaseButton:pressed {
      <item row="5" column="0">
       <widget class="CDPBaseLineEdit" name="lineEdit">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -475,7 +475,7 @@ CDPBaseButton:pressed {
      <item row="16" column="0">
       <widget class="CDPBaseLineEdit" name="offset_3">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -493,7 +493,7 @@ CDPBaseButton:pressed {
      <item row="3" column="0">
       <widget class="CDPBaseLineEdit" name="offset">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -518,7 +518,7 @@ CDPBaseButton:pressed {
      <item row="13" column="0">
       <widget class="CDPBaseLineEdit" name="offset_2">
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -560,9 +560,9 @@ CDPBaseButton:pressed {
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>310</x>
       <y>520</y>
-      <width>381</width>
+      <width>81</width>
       <height>108</height>
      </rect>
     </property>
@@ -570,38 +570,14 @@ CDPBaseButton:pressed {
      <property name="sizeConstraint">
       <enum>QLayout::SetDefaultConstraint</enum>
      </property>
-     <item row="0" column="1" colspan="2">
-      <widget class="CDPBaseLabel" name="label_14">
+     <item row="2" column="1">
+      <widget class="CDPBaseLabel" name="label_20">
        <property name="text">
-        <string>BaseMin</string>
+        <string>NumTests</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="CDPBaseLineEdit" name="offset_11">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.GainMax.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="8">
+     <item row="3" column="1">
       <widget class="CDPBaseLineEdit" name="offset_8">
        <property name="toolTip">
         <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
@@ -610,7 +586,7 @@ CDPBaseButton:pressed {
         <number>-1</number>
        </property>
        <property name="text">
-        <string>Not connected</string>
+        <string>--</string>
        </property>
        <property name="svgFile">
         <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
@@ -625,231 +601,7 @@ CDPBaseButton:pressed {
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="CDPBaseLabel" name="label_13">
-       <property name="text">
-        <string>GainMax</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1" colspan="2">
-      <widget class="CDPBaseLineEdit" name="offset_10">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.BaseMin.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="8">
-      <widget class="CDPBaseLabel" name="label_20">
-       <property name="text">
-        <string>NumTests</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3" colspan="2">
-      <widget class="CDPBaseLabel" name="label_16">
-       <property name="text">
-        <string>OffsetMin</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="CDPBaseLineEdit" name="offset_9">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.GainMin.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="CDPBaseLabel" name="label_12">
-       <property name="text">
-        <string>GainMin</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="5" colspan="2">
-      <widget class="CDPBaseLabel" name="label_19">
-       <property name="text">
-        <string>DroopMin</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="5" colspan="2">
-      <widget class="CDPBaseLabel" name="label_18">
-       <property name="text">
-        <string>DroopMax</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="5" colspan="2">
-      <widget class="CDPBaseLineEdit" name="offset_16">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.DroopMin.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="5" colspan="2">
-      <widget class="CDPBaseLineEdit" name="offset_15">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.DroopMax.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3" colspan="2">
-      <widget class="CDPBaseLineEdit" name="offset_14">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.OffsetMin.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="3" colspan="2">
-      <widget class="CDPBaseLineEdit" name="offset_13">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.OffsetMax.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3" colspan="2">
-      <widget class="CDPBaseLabel" name="label_17">
-       <property name="text">
-        <string>OffsetMax</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1" colspan="2">
-      <widget class="CDPBaseLabel" name="label_15">
-       <property name="text">
-        <string>BaseMax</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1" colspan="2">
-      <widget class="CDPBaseLineEdit" name="offset_12">
-       <property name="toolTip">
-        <string>0 = Deceleration torque, 1 = Constand torque, 2 = Speed cmd offset, 3 = Slave drooping</string>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="text">
-        <string>Not connected</string>
-       </property>
-       <property name="svgFile">
-        <string notr="true">:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
-       </property>
-       <property name="cdpRouting" stdset="0">
-        <string>AntiBacklashApp.FullTest.BaseMax.Value</string>
-       </property>
-       <property name="pushRoutables" stdset="0">
-        <stringlist notr="true">
-         <string>cdpRouting</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="8" rowspan="2">
+     <item row="0" column="1" rowspan="2">
       <widget class="CDPBaseToggleButton" name="toggleButton">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">

@@ -45,6 +45,9 @@
     <LoggedValue Delta="0" Description="Description of logged element." Name="MaxTorque" Routing="AntiBacklashApp.AntiBacklashController.ABParams.MaxTorque"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="SlaveDroop" Routing="AntiBacklashApp.AntiBacklashController.ABParams.SlaveDroop"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="MasterDroop" Routing="AntiBacklashApp.AntiBacklashController.ABParams.MasterDroop"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="SlaveDelay" Routing="AntiBacklashApp.AntiBacklashController.ABParams.SlaveDelay"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="DegreeOffset" Routing="AntiBacklashApp.AntiBacklashController.ABParams.DegreeOffset"></LoggedValue>
+    <LoggedValue Delta="0" Description="Description of logged element." Name="DegreeGain" Routing="AntiBacklashApp.AntiBacklashController.ABParams.DegreeGain"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="Running" Routing="AntiBacklashApp.AntiBacklashController.Running"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="TestIndex" Routing="AntiBacklashApp.AntiBacklashController.TestIndex"></LoggedValue>
     <LoggedValue Delta="0" Description="Description of logged element." Name="AntiBacklashMode" Routing="AntiBacklashApp.AntiBacklashController.ABParams.AntiBacklashMode"></LoggedValue>

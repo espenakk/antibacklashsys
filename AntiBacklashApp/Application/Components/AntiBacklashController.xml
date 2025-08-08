@@ -122,6 +122,9 @@
         <Connection Input="1" LocalName=".Offset" Model="CDPPortConnection" Name="MapOffset"></Connection>
         <Connection Input="1" LocalName=".SlaveDroop" Model="CDPPortConnection" Name="MapSlaveDroop"></Connection>
         <Connection Input="1" LocalName=".MasterDroop" Model="CDPPortConnection" Name="MapMasterDroop"></Connection>
+        <Connection Input="1" LocalName=".SlaveDelay" Model="CDPPortConnection" Name="MapSlaveDelay"></Connection>
+        <Connection Input="1" LocalName=".DegreeOffset" Model="CDPPortConnection" Name="MapDegreeOffset"></Connection>
+        <Connection Input="1" LocalName=".DegreeGain" Model="CDPPortConnection" Name="MapDegreeGain"></Connection>
       </Connections></Port>
   </Ports>
 
