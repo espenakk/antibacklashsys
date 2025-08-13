@@ -21,6 +21,7 @@
     <Subcomponent Model="CDPLogger.CDPLogger" Name="CDPLogger" src="Components/CDPLogger.xml"></Subcomponent>
     <Subcomponent Model="AntiBacklashLib.SpeedCmdSim" Name="SpeedCmdSim" src="Components/SpeedCmdSim.xml"></Subcomponent>
     <Subcomponent Model="AntiBacklashLib.FullTest" Name="FullTest" src="Components/FullTest.xml"></Subcomponent>
+    <Subcomponent Model="AntiBacklashLib.Demo" Name="Demo" src="Components/Demo.xml"></Subcomponent>
   </Subcomponents>
 
   <Signals>

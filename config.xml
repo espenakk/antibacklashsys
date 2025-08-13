@@ -164,8 +164,8 @@
       <valuemap type="QVariantMap">
        <value type="QString" key="id">GUINodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
        <valuemap type="QVariantMap" key="position">
-        <value type="qlonglong" key="x">0</value>
-        <value type="qlonglong" key="y">494</value>
+        <value type="qlonglong" key="x">619</value>
+        <value type="qlonglong" key="y">100</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -173,6 +173,13 @@
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">619</value>
         <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">GUI.mainwidget.AblLamp.cdpHeightRoutingNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">920</value>
+        <value type="double" key="y">83.33333333333334</value>
        </valuemap>
       </valuemap>
      </valuelist>
@@ -189,10 +196,10 @@
        <value type="qlonglong">1</value>
       </valuelist>
       <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
-       <value type="qlonglong">-1051804</value>
-       <value type="qlonglong">-770380</value>
-       <value type="qlonglong">2116972</value>
-       <value type="qlonglong">1550193</value>
+       <value type="qlonglong">-868643</value>
+       <value type="qlonglong">-641459</value>
+       <value type="qlonglong">1741216</value>
+       <value type="qlonglong">1290779</value>
       </valuelist>
       <value type="bool" key="autoLayoutEnabled">true</value>
      </valuemap>
@@ -1513,7 +1520,7 @@
        <value type="QString" key="id">GUI.mainwidget.offset_6.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Source</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">-362</value>
-        <value type="double" key="y">1682.3333333333335</value>
+        <value type="double" key="y">1214.3333333333335</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -1793,7 +1800,7 @@
        <value type="QString" key="id">AntiBacklashApp.VaconFC1.CANopenIOServerNodeType.LabelDataType.InternalDataDirection.Source</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">-310</value>
-        <value type="double" key="y">239.33333333333334</value>
+        <value type="double" key="y">278.33333333333337</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -1807,7 +1814,7 @@
        <value type="QString" key="id">AntiBacklashApp.VaconFC2.CANopenIOServerNodeType.LabelDataType.InternalDataDirection.Source</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">-310</value>
-        <value type="double" key="y">278.33333333333337</value>
+        <value type="double" key="y">239.33333333333334</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -1835,7 +1842,7 @@
        <value type="QString" key="id">AntiBacklashApp.FullTestNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">1546</value>
-        <value type="qlonglong" key="y">1216</value>
+        <value type="qlonglong" key="y">1242</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -1961,35 +1968,35 @@
        <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.StartNodeType.LabelDataType.InternalDataDirection.Sink</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">2246</value>
-        <value type="double" key="y">473.33333333333337</value>
+        <value type="double" key="y">512.3333333333334</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
        <value type="QString" key="id">AntiBacklashApp.FullTest.MaxSpeedNodeType.LabelDataType.InternalDataDirection.Source</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">-223</value>
-        <value type="double" key="y">1214.3333333333335</value>
+        <value type="double" key="y">1175.3333333333335</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
        <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.MaxSpeedNodeType.LabelDataType.InternalDataDirection.Sink</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">2246</value>
-        <value type="double" key="y">512.3333333333334</value>
+        <value type="double" key="y">473.33333333333337</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
        <value type="QString" key="id">GUI.mainwidget.offset_8.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Source</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">-362</value>
-        <value type="double" key="y">1292.3333333333335</value>
+        <value type="double" key="y">1214.3333333333335</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
        <value type="QString" key="id">GUI.mainwidget.label_21.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Sink</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">2246</value>
-        <value type="double" key="y">551.3333333333334</value>
+        <value type="double" key="y">473.33333333333337</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -2052,7 +2059,7 @@
        <value type="QString" key="id">GUI.mainwidget.label_24.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Sink</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">2246</value>
-        <value type="double" key="y">590.3333333333334</value>
+        <value type="double" key="y">512.3333333333334</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -2122,7 +2129,7 @@
        <value type="QString" key="id">AntiBacklashApp.AntiBacklashController.ABParamsNodeType.LabelDataType.InternalDataDirection.Sink</value>
        <valuemap type="QVariantMap" key="position">
         <value type="qlonglong" key="x">2246</value>
-        <value type="double" key="y">629.3333333333334</value>
+        <value type="double" key="y">473.33333333333337</value>
        </valuemap>
       </valuemap>
       <valuemap type="QVariantMap">
@@ -2181,24 +2188,66 @@
         <value type="double" key="y">434.33333333333337</value>
        </valuemap>
       </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.DemoNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">1546</value>
+        <value type="qlonglong" key="y">1761</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.Demo.ABParamsNodeType.LabelDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-208</value>
+        <value type="double" key="y">590.3333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.Demo.StartNodeType.LabelDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-160</value>
+        <value type="double" key="y">1097.3333333333335</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.Start2NodeType.LabelDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">2246</value>
+        <value type="double" key="y">512.3333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">GUI.mainwidget.toggleButton_2.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-419</value>
+        <value type="double" key="y">1292.3333333333335</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.ForceFeedbackJoystickNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">3806</value>
+       </valuemap>
+      </valuemap>
      </valuelist>
      <valuemap type="QVariantMap" key="settings">
       <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
-       <value type="double">0.38090839107005414</value>
+       <value type="double">0.45709006928406487</value>
        <value type="qlonglong">0</value>
        <value type="qlonglong">0</value>
        <value type="qlonglong">0</value>
-       <value type="double">0.38090839107005414</value>
+       <value type="double">0.45709006928406487</value>
        <value type="qlonglong">0</value>
        <value type="qlonglong">0</value>
        <value type="qlonglong">0</value>
        <value type="qlonglong">1</value>
       </valuelist>
       <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
-       <value type="qlonglong">-1200</value>
-       <value type="qlonglong">2780</value>
-       <value type="qlonglong">2901</value>
-       <value type="qlonglong">1672</value>
+       <value type="qlonglong">-726</value>
+       <value type="qlonglong">247</value>
+       <value type="qlonglong">4557</value>
+       <value type="qlonglong">3592</value>
       </valuelist>
       <value type="bool" key="autoLayoutEnabled">true</value>
      </valuemap>
@@ -3574,10 +3623,10 @@
        <value type="qlonglong">1</value>
       </valuelist>
       <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
-       <value type="qlonglong">-3800</value>
-       <value type="qlonglong">-3103</value>
-       <value type="qlonglong">12662</value>
-       <value type="qlonglong">7896</value>
+       <value type="qlonglong">-2138</value>
+       <value type="qlonglong">-1778</value>
+       <value type="qlonglong">11024</value>
+       <value type="qlonglong">6575</value>
       </valuelist>
       <value type="bool" key="autoLayoutEnabled">true</value>
      </valuemap>
@@ -16698,6 +16747,449 @@
      </valuemap>
     </valuemap>
     <value type="QString" key="id">AntiBacklashApp.Sine.SimCmdPort.MapSpeedCMD</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashControllerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">294</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">WDGA58SEncoderNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">588.2439926062845</value>
+        <value type="double" key="y">15.970425138632208</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">KublerF5888MNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">656.1182994454712</value>
+        <value type="double" key="y">22.624768946395562</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">EncoderPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">1436</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">CANOpenPCIIOServerNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">195.19408502772643</value>
+        <value type="double" key="y">-195.19408502772643</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">KublerF5888NodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="double" key="x">346.6666666666667</value>
+        <value type="qlonglong" key="y">4229</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">VaconMarineAppFCC6NodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">929</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">FC1NodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">1896</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">FC2NodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">1696</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">FC1NodeNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">4229</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">FC1PortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">4029</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">VaconFC1NodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">1616</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">KublerF5889NodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">2497.6666666666665</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">KublerF5888_oldNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="double" key="y">2653.6666666666665</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SpeedCMDTimerSimNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">1059</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">ABCTestSimPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">ABCSignalLogPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SignalPlotterNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">1097</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SimCmdPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">2563</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SpeedCmdSimNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">2757</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">SimPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">FCIOPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">1630</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">VaconFCNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">3068</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">ShaftPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">2369</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">FullTestNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">1824</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">ABParamPortNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">DemoNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">917</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">StartNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">0</value>
+        <value type="qlonglong" key="y">3969</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">0.6261574074074074</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">0.6261574074074074</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-786</value>
+       <value type="qlonglong">1642</value>
+       <value type="qlonglong">4397</value>
+       <value type="qlonglong">2622</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">AntiBacklashLib</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmd.MapSpeedCMDNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmd.MapAntiBacklashEnabledNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">294</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmd.MapEnableFCsNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">488</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmd.SpeedCMDNodeType.LabelDataType.ExternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-163</value>
+        <value type="double" key="y">83.33333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmd.EnableFCsNodeType.LabelDataType.ExternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-158</value>
+        <value type="double" key="y">161.33333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmd.AntiBacklashEnabledNodeType.LabelDataType.ExternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-239</value>
+        <value type="double" key="y">122.33333333333334</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmd</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.StartNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-108</value>
+        <value type="qlonglong" key="y">206</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.Start2NodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-118</value>
+        <value type="qlonglong" key="y">167</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.RampDurationNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-184</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.ConstSpeedDurationNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-236</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.MaxSpeedNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-154</value>
+        <value type="qlonglong" key="y">128</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim.SimCmdNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">GUI.mainwidget.offset_4.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="double" key="y">83.33333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.AntiBacklashController.SimCmdNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="double" key="y">161.33333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">GUI.mainwidget.offset_5.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="double" key="y">122.33333333333334</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">AntiBacklashApp.SpeedCmdSim</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes"/>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">3.28</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">3.28</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-420</value>
+       <value type="qlonglong">-301</value>
+       <value type="qlonglong">840</value>
+       <value type="qlonglong">601</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">AntiBacklashApp.Demo.Start</value>
+   </valuemap>
+   <valuemap type="QVariantMap">
+    <valuemap type="QVariantMap" key="data">
+     <valuelist type="QVariantList" key="nodes">
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">GUI.mainwidget.toggleButton.cdpRoutingNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="double" key="y">161.33333333333334</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.Demo.ABParamsNodeType.ComponentDataType.InternalDataDirection.TwoWay</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">200</value>
+        <value type="qlonglong" key="y">100</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.Demo.EnableNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-125</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.Demo.IsRunningNodeType.ComponentDataType.InternalDataDirection.Source</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">-149</value>
+        <value type="qlonglong" key="y">89</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.Demo.StartNodeType.ComponentDataType.InternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="qlonglong" key="y">50</value>
+       </valuemap>
+      </valuemap>
+      <valuemap type="QVariantMap">
+       <value type="QString" key="id">AntiBacklashApp.AntiBacklashController.ABParamsNodeType.LabelDataType.ExternalDataDirection.Sink</value>
+       <valuemap type="QVariantMap" key="position">
+        <value type="qlonglong" key="x">800</value>
+        <value type="double" key="y">122.33333333333334</value>
+       </valuemap>
+      </valuemap>
+     </valuelist>
+     <valuemap type="QVariantMap" key="settings">
+      <valuelist type="QVariantList" key="BlockDiagram/ViewMatrix">
+       <value type="double">2.0393175074183976</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="double">2.0393175074183976</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">0</value>
+       <value type="qlonglong">1</value>
+      </valuelist>
+      <valuelist type="QVariantList" key="BlockDiagram/ViewRect">
+       <value type="qlonglong">-184</value>
+       <value type="qlonglong">-366</value>
+       <value type="qlonglong">1350</value>
+       <value type="qlonglong">967</value>
+      </valuelist>
+      <value type="bool" key="autoLayoutEnabled">true</value>
+     </valuemap>
+    </valuemap>
+    <value type="QString" key="id">AntiBacklashApp.Demo</value>
    </valuemap>
   </valuelist>
  </data>

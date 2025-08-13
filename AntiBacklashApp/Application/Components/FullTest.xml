@@ -21,9 +21,9 @@
   </Alarms>
 
   <Parameters>
-    <Parameter Name="NumTests" Value="7"></Parameter>
+    <Parameter Name="NumTests" Value="4"></Parameter>
     <Parameter Name="AntiBacklashMode"></Parameter>
-    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="2"></Parameter>
+    <Parameter Name="LoadTorqueLimit" Unit="Nm" Value="3"></Parameter>
     <Parameter Name="MaxTorque" Unit="Nm" Value="5"></Parameter>
     <Parameter Name="SlaveTorqueBase" Unit="Nm" Value="3"></Parameter>
     <Parameter Name="SlaveTorqueGain" Unit="Nm" Value="6"></Parameter>
@@ -49,6 +49,7 @@
         <Connection Input="1" LocalName=".SlaveDelay" Model="CDPPortConnection" Name="MapSlaveDelay"></Connection>
         <Connection Input="1" LocalName=".DegreeOffset" Model="CDPPortConnection" Name="MapDegreeOffset"></Connection>
         <Connection Input="1" LocalName=".DegreeGain" Model="CDPPortConnection" Name="MapDegreeGain"></Connection>
+        <Connection Input="1" LocalName=".AntiBacklashEnabled" Model="CDPPortConnection" Name="MapAntiBacklashEnabled"></Connection>
       </Connections></Port>
   </Ports>
 </Component>

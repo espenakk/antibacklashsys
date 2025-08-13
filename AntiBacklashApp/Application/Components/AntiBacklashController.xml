@@ -111,7 +111,7 @@
         <Connection Input="1" LocalName=".ShaftAngle" Model="CDPPortConnection" Name="MapShaftAngle"></Connection>
         <Connection Input="1" LocalName=".ShaftRounds" Model="CDPPortConnection" Name="MapShaftRounds"></Connection>
       </Connections></Port>
-    <Port Input="1" Model="AntiBacklashLib.ABParamPort" Name="ABParams" Routing="..FullTest.ABParams">
+    <Port Input="1" Model="AntiBacklashLib.ABParamPort" Name="ABParams" Routing="..Demo.ABParams">
 
       <Connections>
         <Connection Input="1" LocalName=".AntiBacklashMode" Model="CDPPortConnection" Name="MapAntiBacklashMode"></Connection>
@@ -125,6 +125,7 @@
         <Connection Input="1" LocalName=".SlaveDelay" Model="CDPPortConnection" Name="MapSlaveDelay"></Connection>
         <Connection Input="1" LocalName=".DegreeOffset" Model="CDPPortConnection" Name="MapDegreeOffset"></Connection>
         <Connection Input="1" LocalName=".DegreeGain" Model="CDPPortConnection" Name="MapDegreeGain"></Connection>
+        <Connection Input="1" LocalName=".AntiBacklashEnabled" Model="CDPPortConnection" Name="MapAntiBacklashEnabled"></Connection>
       </Connections></Port>
   </Ports>
 
